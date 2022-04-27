@@ -1,3 +1,5 @@
+package StateOfWakanda1;
+
 // The State Of Wakanda - 1
 // Easy
 

@@ -1,3 +1,5 @@
+package InputDisplay_2dArray;
+
 // 2d Arrays Demo
 // Easy
 

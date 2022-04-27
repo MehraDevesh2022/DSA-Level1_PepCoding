@@ -1,3 +1,5 @@
+package Multipication_2dArray;
+
 import java.util.Scanner;
 
 // Matrix Multiplication
