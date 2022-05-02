@@ -145,7 +145,6 @@ public class Main{
     {
          int r1 = a.length;
          int c1 = a[0].length;
-         int r2 = b.length;
          int c2 = b[0].length;
          int c[][] = new int[r1][c2]; 
          int sum=0;
