@@ -83,7 +83,7 @@ import java.util.Scanner;
 
 public class Main {
 public static Scanner scn = new Scanner(System.in);
-
+  // input
 public static void input(int arr[][]){
     for(int i=0; i<arr.length; i++){
         for(int j=0; j<arr[0].length; j++){
@@ -94,8 +94,8 @@ public static void input(int arr[][]){
 
 }
 
-
-
+/*
+// 1st---> using min or max method
 public static void sofw2(int arr[][]){
        int n = arr.length;
        int minc =0;
@@ -110,6 +110,18 @@ public static void sofw2(int arr[][]){
           maxr--;
           minc++;
        }     
+}
+*/
+
+// 2nd --> using gap method between i and j
+public static void sofw2(int arr[][]){
+   int n = arr.length;
+   for(int gap =0; gap<n; gap++ ){
+       for(int i=0 , j=gap; j<n; i++ ,j++  ){ // j =gap bcz every  n time colom will increase by 1, 0 to n 
+           System.out.println(arr[i][j]);
+       }
+   }
+
 }
 
 public static void main(String[] args){
