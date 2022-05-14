@@ -34,7 +34,8 @@ public class Main {
         for (int i = 0; i < n; i++) {
             if (max < arr[i]) {
                 max = arr[i];
-            } else if (min > arr[i]) {
+            } 
+            if (min > arr[i]) {
                 min = arr[i];
             }
         }
