@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 /*
 Rotate An Array
@@ -35,52 +35,113 @@ Sample Input
 Sample Output
 3 4 5 1 2
 */
+import java.io.*;
+import java.util.*;
 
+public class Main{
+  public static void display(int[] a){
+    StringBuilder sb = new StringBuilder();
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n= scn.nextInt();
-        int a[] = new int[n];
-        for(int i=0; i<n; i++)
-        {
-            a[i]= scn.nextInt();
-        }
-        int k= scn.nextInt();
-         Rotate_Array(a,k);
-
+    for(int val: a){
+      sb.append(val + " ");
     }
-    public static void Rotate_Array(int a[] , int k)
-    {   if(k<0)
+    System.out.println(sb);
+  }
+
+  public static void rotate(int[] a, int k){
+    // write your code here
+       k = k%a.length;  
+     if(k<0)
         {
             k=a.length +k;
-            if(k<0)
-            {
-                k=a.length +k;
-            }
+           
         }
+       
         while(k-->0)
         {    int j = a.length-1;
-            int lastD = a[j]; 
-           for(int i=j-1; j>=0; i--) 
+            
+           for(int i=j-1; j>0; i--) 
            {
-                 if(j==0)
-                 {
-                    a[j] =lastD;
-                    break;
-                 }
-                 else{
+                
+                
                      int temp = a[i];
                      a[i] =a[j];
                      a[j] =temp;
                      j--;
-                 }
+                 
                  
            }    
         }
-       for(int i=0; i<a.length; i++)
-    {
-        System.out.println(a[i]);
+    //    for(int i=0; i<a.length; i++)
+    // {
+    //     System.out.println(a[i]);
+    // }
+    
+  }
+
+public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    int n = Integer.parseInt(br.readLine());
+    int[] a = new int[n];
+    for(int i = 0; i < n; i++){
+       a[i] = Integer.parseInt(br.readLine());
     }
-    }
+    int k = Integer.parseInt(br.readLine());
+
+    rotate(a, k);
+    display(a);
+ }
+
+
+
 }
+
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner scn = new Scanner(System.in);
+//         int n= scn.nextInt();
+//         int a[] = new int[n];
+//         for(int i=0; i<n; i++)
+//         {
+//             a[i]= scn.nextInt();
+//         }
+//         int k= scn.nextInt();
+//          Rotate_Array(a,k);
+
+//     }
+//     public static void Rotate_Array(int a[] , int k)
+//     {   if(k<0)
+//         {
+//             k=a.length +k;
+//             if(k<0)
+//             {
+//                 k=a.length +k;
+//             }
+//         }
+//         while(k-->0)
+//         {    int j = a.length-1;
+//             int lastD = a[j]; 
+//            for(int i=j-1; j>=0; i--) 
+//            {
+//                  if(j==0)
+//                  {
+//                     a[j] =lastD;
+//                     break;
+//                  }
+//                  else{
+//                      int temp = a[i];
+//                      a[i] =a[j];
+//                      a[j] =temp;
+//                      j--;
+//                  }
+                 
+//            }    
+//         }
+//        for(int i=0; i<a.length; i++)
+//     {
+//         System.out.println(a[i]);
+//     }
+//     }
+// }

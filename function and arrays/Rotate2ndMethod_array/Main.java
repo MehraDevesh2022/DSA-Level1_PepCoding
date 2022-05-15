@@ -45,7 +45,7 @@ public class Main {
         System.out.println(sb);
     }
 
-    // revrese fumction
+    // revrese function
     public static void reverse(int a[], int i, int j) {
         while (i <= j) {
             swap(a, i, j);
@@ -64,7 +64,7 @@ public class Main {
     // actual function for code
     public static void rotate(int[] a, int k) {
         // write your code here
-        int n = a.length;
+         int n = a.length;
 
         k = k % n;
         // if k is negative value

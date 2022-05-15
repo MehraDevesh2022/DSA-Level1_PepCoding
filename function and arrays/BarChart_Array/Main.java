@@ -57,11 +57,11 @@ public class Main {
           }
           
         }
-        for(int row=0; row<max; row++)
+        for(int row=0; max>0; row++)
         {
           for(int clm =0; clm<a.length; clm++ )
           {
-              if(max - a[clm] == row)
+              if(a[clm] >= max)
               {
                   System.out.print("*\t");
               }
@@ -71,6 +71,7 @@ public class Main {
               }
           }
           System.out.println();
+          max--;
         }
 
     }
