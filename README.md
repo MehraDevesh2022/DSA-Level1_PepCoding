@@ -1,7 +1,7 @@
 # DSA-L1-Fjp3-PepCoding
 ##  Level - 1
 
-## Getting startd 
+## Getting startd :
 ### 1  : The Curious Case Of Benjamin Bulbs  👍
 ### 2  : Count Digit 👍
 ### 3  : Digits Of number 👍
@@ -18,6 +18,9 @@
 ### 14 : Rotate A Number 👍
 
 
-## Pattern :anger:
-*
-*  *
+## Pattern :
+### 20 Question Done !
+
+## Function and Array
+### 1 : BarChart 👍
+### 2 : Binary Search 👍
