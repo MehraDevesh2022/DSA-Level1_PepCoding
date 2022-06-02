@@ -59,7 +59,7 @@ public class Main {
         }
       }
       if (flag != 1)
-        System.out.println(n));
+        System.out.println(n);
     }
   }
 }

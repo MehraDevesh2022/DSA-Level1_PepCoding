@@ -35,20 +35,19 @@
 // Sample Output
 // 2 2 2 2 2 3 3 5
 import java.util.*;
+
 public class Main {
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n= scn.nextInt();
-        for(int i=2; i*i<=n; i++)
-        {
-            while(n%2==0)
-            {
-                n = n/i;
-                System.out.println(i);
-
+        int n = scn.nextInt();
+        for (int i = 2; i * i <= n; i++) {
+            while (n % i == 0) {
+                n = n / i;
+                System.out.print(i + " ");
             }
         }
-        if(n!=1) // when number is divisibal by only itself
+        if (n != 1) // when number divisibal by only itself
         {
             System.out.println(n);
         }
