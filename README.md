@@ -24,3 +24,7 @@
 ## Function and Array
 ### 1 : BarChart 👍
 ### 2 : Binary Search 👍
+### 3 : Diffrence between two Array 👍
+### 4 : Sum of two Array 👍
+### 5 : Rotate of Array 👍
+### 6 : Reverse an array 👍
