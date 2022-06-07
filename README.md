@@ -28,3 +28,5 @@
 ### 4 : Sum of two Array 👍
 ### 5 : Rotate of Array 👍
 ### 6 : Reverse an array 👍
+### 7 : Span of Array 👍
+### 8 : Inverse Of An Array 👍
