@@ -8,7 +8,7 @@
 ### 4  : Print Fibonacci Numbers Till N 👍
 ### 5  : Gcd And Lcm 👍
 ### 6  : Grading System 👍
-### 7  : Inverse Of A Number 👎 (not done yet)
+### 7  : Inverse Of A Number 👍
 ### 8  : Is A Number Prime 👍
 ### 9  : Prime Factorisation Of A Number 👍
 ### 10 : Is A Number Prime low to high👍 
