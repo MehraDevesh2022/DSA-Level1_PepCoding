@@ -27,33 +27,29 @@ import java.util.Scanner;
 // 73425681
 
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n= scn.nextInt();
-      int temp = n;
-       int count =0;
-     while(temp>10){
-         temp =temp/10;
-         count ++;
+
+punlic class Main{
+public static void main(String[] args) {
+  // write your code here 
+  Scanner scn = new Scanner(System.in);
+  int n = scn.nextInt();
+  int index =0;
+  int inverse =0;
+  while( n!=0){
+      index++;
+      int rem = n%10;
+      n = n/10;
+      int result =power(rem);
+      int sum = result * index;
+      inverse = inverse + sum;
+  }
+  System.out.println(inverse);
+ }
+ public static int power(int n){
+     int val =1;
+     while(n-->1){
+         val = val*10;   // eg --> n =3; so 10*10=100 for 3*100 = 300
      }
-     int pow =(int)Math.pow(10, count);
-      for(int i=1;i<=count+1; i++){
-          temp = n;
-          int pow2 = pow;
-          int index =0;
-          int ans=0;
-          while(i!=ans)
-          {     index++;
-               ans = temp/pow2;
-               temp=temp%pow2;
-               pow2=pow2/10;
-               if(i==ans)
-               {
-                System.out.println(index);
-                break;
-               }
-          }
-      }
-    }
+     return val;
+ }
 }

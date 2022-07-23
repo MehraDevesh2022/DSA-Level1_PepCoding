@@ -29,16 +29,16 @@ public class Main {
 
     public static int spanOfArray(int arr[], int n) {
 
-        int max = Integer.MIN_VALUE; // minus infinity
+        int max = Integer.MIN_VALUE; // minus infinity // why this becuase if array size 0 then max = a[0] goes ouof bond becausse there is no array
         int min = Integer.MAX_VALUE; // plus infinity
-        for (int i = 0; i < n; i++) {
-            if (max < arr[i]) {
-                max = arr[i];
-            } 
-            if (min > arr[i]) {
-                min = arr[i];
-            }
+         for(int i: arr){ // using for enhanced loop || foreach loop  
+       if(max < i){
+            max=i;
         }
+        else if(min > i){
+            min = i;
+        }
+  }
         int span = max - min;
         return span;
     }

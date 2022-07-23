@@ -22,7 +22,7 @@ Sample Input
 
 5
 
-Sample Output
+Sample Outputk
 
         *	
 		*	*	
@@ -45,7 +45,7 @@ public class Main {
         {     //space 
             for(int csp=1; csp<=space; csp++)
             {
-                if(row !=n/2+1) // for midlle two extra star . we need 2 star more intead of space
+                if(row !=n/2+1) // for midlle two extra star . we need 2 star more instead of space
                 {
                     System.out.print("\t");
                 }

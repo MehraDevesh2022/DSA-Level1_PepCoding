@@ -35,15 +35,20 @@ import java.util.Scanner;
 // 5
 // 6
 
+import java.util.*;
+
 public class Main {
-   public static void main(String[] args) {
-       Scanner scn = new Scanner(System.in);
-       int n =  scn.nextInt();
-       while(n!=0)
-       {
-           int ans = n%10;
-           System.out.println(ans);
-           n= n/10;
-       }
-   }    
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        reverseDigit(scn.nextInt());
+    }
+
+    public static void reverseDigit(int n) {
+        while (n != 0) {
+            int rem = n % 10;
+            n = n / 10;
+            System.out.println(rem);
+        }
+    }
 }

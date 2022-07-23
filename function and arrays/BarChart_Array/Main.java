@@ -48,8 +48,8 @@ public class Main {
     {
         
       
-        int max = a[0];
-        for(int i=1; i<a.length; i++)
+        int max = Integer.MIN_VALUE;
+        for(int i=0; i<a.length; i++)
         {
           if(max<a[i])
           {

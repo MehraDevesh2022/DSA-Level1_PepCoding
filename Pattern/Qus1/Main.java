@@ -30,7 +30,7 @@ public class Main{
         int n= scn.nextInt();
         // for initial state
         int star =1;
-        int space= n-1;
+        // int space= n-1;
         for(int row=1; row<=n; row++)
         {
             // for star
@@ -39,13 +39,13 @@ public class Main{
                 System.out.print("*\t");
             }
             // for space
-            for(int csp=1; csp<=space; csp++)
-            {
-                System.out.print("\t");
-            }
+            // for(int csp=1; csp<=space; csp++)
+            // {
+            //     System.out.print("\t");
+            // }
             //update
             star++;
-            space--;
+            // space--;
             System.out.println();
         }
 

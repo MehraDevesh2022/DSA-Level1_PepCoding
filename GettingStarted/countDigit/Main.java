@@ -23,20 +23,26 @@ import java.util.Scanner;
 // 65784383
 
 // Sample Output
-// 8class Main {
+// 8
     
-// }
- public class Main{
-     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n= scn.nextInt();
-        int d=0;
-        while(n>0)
-        {
-            n=n/10;
-            d++;
-           
-        }
-        System.out.println(d);
-     }
- }
+
+ import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+   Scanner scn = new Scanner(System.in);
+    int result = CountDigit(scn.nextInt());
+    System.out.println(result);
+   }
+   // couning digit method
+   public static int CountDigit(int n){
+       int count =0;
+       while(n !=0){
+          n = n/10;
+          count++;
+       }
+        return count;
+   }
+  
+  }

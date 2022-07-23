@@ -10,7 +10,7 @@ Output Format
 b1 b2 b3 b4 .. all bulbs that will be on after nth wave
 Question Video
 
-  COMMENTConstraints
+  COMMENTConstraints 
 2 <= n < 10^9
 Sample Input
 6

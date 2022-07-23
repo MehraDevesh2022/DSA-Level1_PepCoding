@@ -77,3 +77,39 @@ public class Main {
 
     }
 }
+
+// import java.util.*;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//         Scanner scn = new Scanner(System.in);
+//         int n = scn.nextInt();
+//         int k = scn.nextInt();
+//         int result = Rotate(n, k);
+//         System.out.println(result);
+//     }
+
+//     public static int Rotate(int n, int k) {
+//         if (k > n) {
+//             k = k % n;
+//         } else if (k < 0) {
+//             k = (k % n + n) % n;
+//         }
+//         int size = count(n);
+//         int right = n % (int) Math.pow(10, k);
+//         int left = n / (int) Math.pow(10, k);
+//         int result = (right * (int) (Math.pow(10, (size - k)))) + left;
+//         return result;
+
+//     }
+
+//     public static int count(int n) {
+//         int count = 0;
+//         while (n != 0) {
+//             n = n / 10;
+//             count++;
+//         }
+//         return count;
+//     }
+// }
