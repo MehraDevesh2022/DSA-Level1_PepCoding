@@ -68,16 +68,13 @@ public class Main{
                      a[i] =a[j];
                      a[j] =temp;
                      j--;
-                 
-                 
            }    
-        }
+     }
     //    for(int i=0; i<a.length; i++)
     // {
     //     System.out.println(a[i]);
     // }
-    
-  }
+     }
 
 public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -113,12 +110,8 @@ public static void main(String[] args) throws Exception {
 //     }
 //     public static void Rotate_Array(int a[] , int k)
 //     {   if(k<0)
-//         {
-//             k=a.length +k;
-//             if(k<0)
-//             {
-//                 k=a.length +k;
-//             }
+//         {   
+//             k=a.length +k;  // when k is a negative value
 //         }
 //         while(k-->0)
 //         {    int j = a.length-1;

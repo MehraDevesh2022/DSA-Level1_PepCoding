@@ -101,16 +101,20 @@ public static void SumofTwo(int a1[],  int a2[])
        {
            sum = sum+carry;
        }
-       int val = sum % 10; 
+       
          carry = sum /10;
-          a3[k] = val;
+          sum %=10;
+          a3[k] = sum;
           k--;
           j--;
           i--;
     }
     
    for(int p= 0; p<a3.length; p++ )
-   {
+   {    if(carry >0){
+            System.out.println(carry);  // when 9999
+              carry=0;                  //        +1
+           }                             //    10000 when ans > n1,n2 then print carry sapretly
        System.out.println(a3[p]);
    }
 }
