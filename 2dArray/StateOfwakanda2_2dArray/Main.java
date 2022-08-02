@@ -14,10 +14,10 @@ However, a certain visitor decides to travel a different path as follows:
 4. He continues the same path till all the monuments of the upper half have been travelled.
 For Example:
 The monuments are named as:
-1    2    3    4
-5    6    7    8
-9   10  11  12
-13 14  15  16
+1    2    3      4
+5    6    7      8
+9   10   11      12
+13  14   15      16
 The path followed by the visitor is: 1->6->11->16->2->7->12->3->8->4
 You are required to print the path followed by the traveller to visit all the monuments.
 Refer to the photo for a better clarification.
