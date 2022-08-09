@@ -97,7 +97,7 @@ public class Main {
                 }
                
           }     
-        //   System.out.println("Invalid input");
+          System.out.println("Invalid input");
   }
 
    public static void main(String[] args) {

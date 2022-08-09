@@ -32,6 +32,10 @@
 // 1 <= n <= 20
 // -1000 <= matrix[i][j] <= 1000
 
+// approch =>
+ // transpose => row to clm || clm to row swap (arr[i][j] = arr[j][i])
+ // reverse each row after transpose
+
 class Solution {
     public void reverse(int row[]){
         int n = row.length;
