@@ -1,3 +1,5 @@
+package CompressionWithSb;
+
 /*
  * String Compression
 Easy  Prev   Next
