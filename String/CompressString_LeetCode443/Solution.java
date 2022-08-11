@@ -51,32 +51,32 @@ Submissions
  */
 
 class Solution {
-    public int compress(char[] chars) {
-          StringBuilder sb = new StringBuilder();
-          sb.append(chars[0]);
-          int count =1;
-          for(int i=1; i<chars.length; i++){
-             if(chars[i-1]==chars[i]){
-               count ++;
-             }
-             else{
-               if(count>1){
-                 count++;
-               }
-               count =1;
-               sb.append(chars[i]);
-             }
-          }
-
-        
-    }
-    if(count >1){
-      sb.append(count);
-    }
-    int size = sb.length();
-    int arr[] = new int[size]; 
-   for(int i=0; i<sb.length(); i++){
-        arr[i] = sb.charAt(i);
-   }
-   retrun arr;
+    public int compress(char[] str) {
+    StringBuilder sb = new StringBuilder();
+       char curr = str[0];
+       sb.append(curr);
+       int count =1;
+       for(int i=1; i<str.length; i++){
+            curr = str[i];
+            int prv = str[i-1];
+            if(curr == prv){
+                count++;
+            }
+            else{
+              if(count >1){
+                sb.append(count);
+              }
+              sb.append(curr);
+              count =1;
+            }
+       }
+          if (count > 1) {
+         sb.append(count);
+       }
+       for (int i = 0; i < sb.length(); i++) {
+         str[i] = sb.charAt(i); // more value will trucncated bts using new size
+       }
+       return sb.length(); // return size of sb stringbuilder and bts new size of char array will difined
+      
+}
 }

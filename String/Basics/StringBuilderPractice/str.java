@@ -5,13 +5,13 @@ public class str {
 
 	public static String compression1(String str){
 	      StringBuilder sb = new StringBuilder();
-          char first = str.charAt(0);
-	       sb.append(first);
+          char curr = str.charAt(0);
+	       sb.append(curr);
            for(int i=1; i<str.length(); i++){
-            first = str.charAt(i);
+            curr = str.charAt(i);
             char prv = str.charAt(i-1);
-            if(first != prv){
-                sb.append(first);
+            if(curr != prv){
+                sb.append(curr);
             }
            }
 
@@ -21,20 +21,20 @@ public class str {
 	public static String compression2(String str){
 	 
         StringBuilder sb = new StringBuilder();
-        char first = str.charAt(0);
-        sb.append(first);
+        char curr = str.charAt(0);
+        sb.append(curr);
         int count =1;
         for (int i = 1; i < str.length(); i++) {
-            first = str.charAt(i);
+            curr = str.charAt(i);
             char prv = str.charAt(i -1);
-             if(first == prv){
+             if(curr == prv){
                 count++;
              }
              else{
                 if(count > 1){
                     sb.append(count);
                 }
-                sb.append(first);
+                sb.append(curr);
                 count =1;
              }
         }
