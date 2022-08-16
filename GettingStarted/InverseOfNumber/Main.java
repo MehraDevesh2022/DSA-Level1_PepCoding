@@ -28,7 +28,7 @@ import java.util.Scanner;
 
 
 
-punlic class Main{
+public class Main{
 public static void main(String[] args) {
   // write your code here 
   Scanner scn = new Scanner(System.in);
@@ -40,6 +40,7 @@ public static void main(String[] args) {
       int rem = n%10;
       n = n/10;
       int result =power(rem);
+  
       int sum = result * index;
       inverse = inverse + sum;
   }
