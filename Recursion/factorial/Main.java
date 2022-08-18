@@ -33,7 +33,8 @@ public class Main {
         // write your code here
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        factorial(n);
+        int result = factorial(n);
+        System.out.println(result);
     }
 
     public static int factorial(int n) {
