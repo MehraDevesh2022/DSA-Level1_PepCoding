@@ -36,10 +36,13 @@ public class Main {
         int result = factorial(n);
         System.out.println(result);
     }
-
+ 
     public static int factorial(int n) {
-        // work 1 and base case
-        if (n == 0) {
+            // short line of code given below using ternery operator.
+        //   return(n==0)? 1: (n* factorial(n-1)); 
+
+       // work 1 and base case
+        if (n == 0) { // 0! always is one
             return 1;
         }
         // faith and work 2
@@ -48,7 +51,6 @@ public class Main {
         int ans = faith * n;
         return ans;
 
-        return 0;
     }
 
 }
