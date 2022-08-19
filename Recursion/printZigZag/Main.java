@@ -32,7 +32,7 @@
  * 3 2 1 1 1 2 1 1 1 2 3 2 1 1 1 2 1 1 1 2 3
  */
 
- import java.io.*;
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -40,25 +40,25 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // write your code here
         Scanner scn = new Scanner(System.in);
-        int n  = scn.nextInt();
+        int n = scn.nextInt();
         pzz(n);
     }
 
     public static void pzz(int n) {
-     // work 1st and base case
-        if(n==0){
-        return;
-      }
-      // work 2nd and expectation
-      System.out.print(n + " ");
-      // work 3 and faith 1st
-      pzz(n-1);
-      // work 4rd and expectation
-      System.out.print(n + " ");
-      // work 5 and faith 2nd
-      pzz(n - 1);
-      // work 6th and expectation
-      System.out.print(n + " ");
+        // work 1st and base case
+        if (n == 0) {
+            return;
+        }
+        // work 2nd and expectation
+        System.out.print(n + " ");
+        // work 3 and faith 1st
+        pzz(n - 1);
+        // work 4rd and expectation
+        System.out.print(n + " ");
+        // work 5 and faith 2nd
+        pzz(n - 1);
+        // work 6th and expectation
+        System.out.print(n + " ");
     }
 
 }
