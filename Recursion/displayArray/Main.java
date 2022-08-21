@@ -84,7 +84,7 @@ public class Main {
              // expectation => i am printing myshelf.
                System.out.println(arr[idx]);
              // faith => idx+1 indexes will print themshelf
-              displayArr(arr, idx+1);
+              displayArr(arr, ++idx);
 
     }
 
