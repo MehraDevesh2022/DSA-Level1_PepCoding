@@ -78,10 +78,10 @@ public class Main {
             return idx;
         } 
         // faith => idx+1 calls will return there ans.
-        else {
+       
             int recAns = firstIndex(arr , idx+1 , x);
             return recAns;
-        }
+    
 
         
         
