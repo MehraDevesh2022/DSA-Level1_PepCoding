@@ -23,7 +23,7 @@
 import java.io.*;
 import java.util.*;
 
-import javax.print.DocFlavor.STRING;
+
 
 public class Main {
 
@@ -50,7 +50,7 @@ public class Main {
            ArrayList<String> finalAns = new ArrayList<>();
            // expecation => what ever ans comes i will add myShelf 
            for(String s : recAns){
-              finalAns.add(s);           //    ["" , c , b , bc] . when not adding to 
+              finalAns.add(s);           //    ["" , c , b , bc] . when not adding 
            }                                                              // adding from here
              for(String s : recAns){                      //.............  //................
               finalAns.add(ch + s);    // adding himshelf ["" ,c , b , bc  , a , ac , ab, abc]

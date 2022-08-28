@@ -66,7 +66,7 @@
       String subStr =  str.substring(1);
       ArrayList<String> recAns = getKPC(subStr);
       ArrayList<String> myAns = new ArrayList<>();
-      int idx  =  ch-'0';
+      int idx  =  ch-'0';  // type conversion will give another ascci value so use this method eg : ch=> '7' -'0' == 67 -60 ==> 7
       
    
       String currStr = code[idx];
