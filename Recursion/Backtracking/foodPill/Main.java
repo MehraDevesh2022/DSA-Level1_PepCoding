@@ -72,7 +72,8 @@ public class Main {
         // checks for each call
         if(sr<0 || sc<0 || sr >=maze.length || sc>=maze[0].length || maze[sr][sc] ==1)
           return;
-
+     
+          // base 
        if(sr == maze.length-1 && sc ==maze[0].length-1){
          System.out.println(asf);
          return;
