@@ -69,6 +69,7 @@ public class Main {
 
     // asf -> answer so far
     public static void floodfill(int[][] maze, int sr, int sc, String asf) {
+        // checks for each call
         if(sr<0 || sc<0 || sr >=maze.length || sc>=maze[0].length || maze[sr][sc] ==1)
           return;
 
