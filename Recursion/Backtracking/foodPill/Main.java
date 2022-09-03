@@ -29,7 +29,7 @@ Question Video
 
   COMMENTConstraints
 1 <= n <= 10
-1 <= m <= 10
+1 <= m <= 10 
 e1, e2, .. n * m elements belongs to set (0, 1)
 Sample Input
 3 3
@@ -39,12 +39,6 @@ Sample Input
 Sample Output
 rddr
  */
-
-
-
-
-
-
 
 
 
