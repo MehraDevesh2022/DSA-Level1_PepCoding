@@ -1,3 +1,7 @@
+        //  "The best way out is always through"
+                 // ~Robert Frost"
+
+
 /*Target Sum Subsets
 Easy  Prev   Next
 1. You are given a number n, representing the count of elements.
@@ -64,13 +68,14 @@ public class Main {
         if (sos > tar) {
             return;
         }
-        if (idx == arr.length) {
+        if (idx == arr.length) {  // arr.length is base case bcz if there 0 is value in any idx so that will also included as a set [10,20,30,40,50,0]
             if (sos == tar)
                 System.out.println(set + ".");
             return;
         }
-
+       // when include
         printTargetSumSubsets(arr, idx + 1, set + arr[idx] + ", ", sos + arr[idx], tar);
+        // when not include (exclude)
         printTargetSumSubsets(arr, idx + 1, set, sos, tar);
 
     }
