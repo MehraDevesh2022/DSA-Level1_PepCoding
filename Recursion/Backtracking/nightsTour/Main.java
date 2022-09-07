@@ -1,4 +1,5 @@
-/*                                   ""
+/*                             "The best error message is the one that never shows up.
+                                            ~ Thomas Fuchs"
  * Knights Tour
 Easy  Prev   Next
 1. You are given a number n, the size of a chess board.
