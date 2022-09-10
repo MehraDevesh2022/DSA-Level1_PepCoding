@@ -1,4 +1,5 @@
-/*
+/*                  "Testing leads to failure, and failure leads to understanding.
+                                              ~ Burt Rutan"
  * N Queens
  * Easy Prev Next
  * 1. You are given a number n, the size of a chess board.
