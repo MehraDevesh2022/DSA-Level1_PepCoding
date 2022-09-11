@@ -1,4 +1,7 @@
 package addLast;
+              // "Computer Engineers don't fall in love. They just "link" with someone
+                                         //   ~Sheer Angel"
+
 
 /*Add Last In Linked List
 Easy
@@ -35,6 +38,16 @@ Sample Output
 50
 5
 50*/
+
+/*
+ * approch : val =10;
+ * 1 : convert int val to Node data type
+ * 2 : case : 1 when size of linked list == 0 
+ *       asign temp Node to head and tail size ++;
+ * 3 : case : 2 when size > 0
+ *    asign tail.next = temp and tail = temp also size ++
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -50,17 +63,17 @@ public class Main {
     int size;
 
     void addLast(int val) {
-        // we need to write our code for this function
-      Node temp=new Node(); // first we create a node temp
+       
+      Node temp=new Node(); 
 
-      temp.data = val; // then we assign data val in temp data 
-      if(size==0) // when there is no link list
+      temp.data = val; 
+      if(size==0) 
       {
         head=temp;
         tail=temp;
         size++;
       }
-      else {     // when size is Greater than zero 
+      else {   
         tail.next=temp;
         tail=temp;
         size++;
