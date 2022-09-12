@@ -1,5 +1,6 @@
 package getValue;
-
+                       // A little progress each day adds up to big results.
+                      //                 ~Satya Nani
 /*
 Get Value In Linked List
 Easy
@@ -60,6 +61,23 @@ Sample Output
 Invalid arguments
 List is empty
 */
+/*
+ * approch : 
+ * getFirst :
+ *   When size ==0 print list empty and return -1
+ *   else return head.data
+ * getLast :
+ *  when size ==0 print list empty and return -1
+ *  else return tail.data
+ * getAt : Note idx is 0 based
+ *  case 1 : when size ==0 print list empty and return -1
+ *  case 2 : when idx < 0 or idx >= size 
+ *     print invalid data and return -1
+ *  case 3 : idx a random number under size
+ *   make ref Node curr and point head.
+ *   Travel in the loop and  move curr =curr.next untill idx-- not turn zero
+ *  finaly return curr.data
+ */
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
