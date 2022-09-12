@@ -1,5 +1,6 @@
 package removeFirst;
-
+               // An algorithm must be seen to be believed.
+               //               ~Donald Knuth
 /*
 Remove First In Linkedlist
 Easy
@@ -53,6 +54,17 @@ Sample Output
 3
 List is empty
 */
+/*
+ * Approch :
+ *  case 1 : size ==0
+ *  print "list is empty"
+ *  case 2 : size == 1
+ *  head =tail = null
+ *  case 3 : size > 1
+ *  head = head.next
+ *  finally size-- 
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
