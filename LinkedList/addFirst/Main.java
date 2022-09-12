@@ -1,4 +1,6 @@
 package addFirst;
+          //  "If we wish to count lines of code, we should not regard them as "lines produced" rather the "lines spent".
+          //                       " ~Edsgar Dijkstra"
 /*
 Add First In Linked List
 Easy
@@ -65,6 +67,20 @@ Invalid arguments
 2
 List is empty
 */
+
+
+/*
+ * Approch :   
+ *  Make int type to Node type to val : let say temp
+ *  if size == 0
+ *  head = temp;
+ *  case 2 : size >0
+ *  point temp.next to head
+ *  now point head = temp
+ *  finaly size ++;
+ */
+
+
 import java.io.*;
 
 public class Main {

@@ -38,6 +38,18 @@ package dIsplayLinklist;
 // 10 20 30 40 50 
 // 5
 
+/*
+ * approch : 
+ * size function : size maintainde at addLast function alredy from addLast question
+ * display function : 
+ *    Make a Node ref var and point to head;
+ *    loop until curr != null  
+ *    now move curr = curr.next
+ * 
+ */
+
+
+
 import java.io.*;
 
 
@@ -68,14 +80,16 @@ public class Main {
     }
 
     public int size(){
-      return size; // size from addLast function we have 
+      // write  code here
+      return size;       
     }
     public void display(){
+      // write code  here
     Node curr =head;
-    while(curr!=null) //we need to loop terminate when current reached in tail 
+    while(curr!=null) 
     {
       System.out.print(curr.data +" ");
-      curr=curr.next; // move one the next node
+      curr=curr.next; 
     }
     System.out.println(); // we need new line for new text case as given in o/p formate
       
