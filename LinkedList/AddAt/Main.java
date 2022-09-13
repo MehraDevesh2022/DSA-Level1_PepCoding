@@ -1,5 +1,10 @@
 package AddAt;
+                            /*
+    "I don't care if it works on your machine! We are not shipping your machine!"
+                            ~ Vidiu Platon
+                             */
 
+ 
 /*Add At Index In Linked List
 Easy
 
@@ -65,6 +70,20 @@ Sample Output
 3
 60
 */
+/*
+ * Approch :
+ *   when idx ==0 call addFirst function 
+ *   when idx ==size call addLast function
+ *   when idx <0 || idx >0 print invalid
+ *   when idx under 0 to size -1 :
+ *     make New node and add data = val on it
+ *     make ref Node temp  and point it to head
+ *     move the ref temp = temp.next in loop till idx-1 position (before where new node need to be added)
+ *     Now point node.next to temp.next
+ *     and temp.next = node.next (node is added into given idx)
+ *     now increase the size++ 
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -137,6 +156,7 @@ public class Main {
         }
 
         public int getAt(int idx) {
+            // wirte code here
             if (size == 0) { // if when size =0
                 System.out.println("List is empty");
                 return -1;

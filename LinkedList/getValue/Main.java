@@ -1,6 +1,7 @@
 package getValue;
-                       // A little progress each day adds up to big results.
-                      //                 ~Satya Nani
+
+// A little progress each day adds up to big results.
+//                 ~Satya Nani
 /*
 Get Value In Linked List
 Easy
@@ -107,21 +108,21 @@ public class Main {
       size++;
     }
 
-    public int size(){
+    public int size() {
       return size;
     }
 
-    public void display(){
-      for(Node temp = head; temp != null; temp = temp.next){
+    public void display() {
+      for (Node temp = head; temp != null; temp = temp.next) {
         System.out.print(temp.data + " ");
       }
       System.out.println();
     }
 
-    public void removeFirst(){
-      if(size == 0){
+    public void removeFirst() {
+      if (size == 0) {
         System.out.println("List is empty");
-      } else if(size == 1){
+      } else if (size == 1) {
         head = tail = null;
         size = 0;
       } else {
@@ -130,87 +131,75 @@ public class Main {
       }
     }
 
-    public int getFirst(){  
-        if(size==0)
+    public int getFirst() {
+      if (size == 0) {
+        System.out.println("List is empty"); // there is emptylink list
+        return -1;
+      } else {
+        return head.data; // retuning first element of index
+      }
+    }
+
+    public int getLast() {
+      // write your code here
+      if (size == 0) {
+        System.out.println("List is empty");
+        return -1;
+      } else {
+        return tail.data;
+      }
+    }
+
+    public int getAt(int idx) {
+      if (idx == 0) {
+        getFirst(); // if when idx in 0
+      } else if (idx == size - 1) {
+        getLast(); // when idx in lst
+      } else if (idx < 0 || idx > size - 1) {
+        System.out.println("Invalid arguments"); // edge case
+        return -1;
+      } else {
+        Node temp = head;
+        for (int i = 0; i < idx; i++) // loop for given idx
         {
-          System.out.println("List is empty"); // there is emptylink list
-          return -1;
-        }
-        else 
-        {
-          return head.data; // retuning first element of index
-        }
-   }
+          temp = temp.next;
 
-   public int getLast(){
-     // write your code here
-       if(size==0)
-        {
-          System.out.println("List is empty");
-          return -1;
         }
-        else{
-         return tail.data;
-        }
-   }
-
-   public int getAt(int idx){
-     if(idx==0)
-     {
-       getFirst();  //if when idx in 0
-     }
-     else if(idx==size-1)
-     {
-       getLast(); // when idx in lst
-     }
-     else if(idx <0 || idx >size-1)
-     {
-       System.out.println("Invalid arguments"); // edge case
-       return -1;
-     }
-     else{
-       Node temp=head;
-       for(int i=0; i<idx;i++) // loop for given idx
-       {
-         temp=temp.next;  
-
-       }
-       return temp.data; //retuening given idx data
-     }
-        return 0; // return type must need
-   }
- }
-
+        return temp.data; // retuening given idx data
+      }
+      return 0; // return type must need
+    }
+  }
 
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     LinkedList list = new LinkedList();
 
     String str = br.readLine();
-    while(str.equals("quit") == false){
-      if(str.startsWith("addLast")){
+    while (str.equals("quit") == false) {
+      if (str.startsWith("addLast")) {
         int val = Integer.parseInt(str.split(" ")[1]);
         list.addLast(val);
-      } else if(str.startsWith("size")){
+      } else if (str.startsWith("size")) {
         System.out.println(list.size());
-      } else if(str.startsWith("display")){
+      } else if (str.startsWith("display")) {
         list.display();
-      } else if(str.startsWith("removeFirst")){
+      } else if (str.startsWith("removeFirst")) {
         list.removeFirst();
-      } else if(str.startsWith("getFirst")){
+      } else if (str.startsWith("getFirst")) {
         int val = list.getFirst();
-        if(val != -1){
+        if (val != -1) {
           System.out.println(val);
         }
-      } else if(str.startsWith("getLast")){
+      } else if (str.startsWith("getLast")) {
         int val = list.getLast();
-        if(val != -1){
+        if (val != -1) {
           System.out.println(val);
         }
-      } else if(str.startsWith("getAt")){
+      } else if (str.startsWith("getAt")) {
         int idx = Integer.parseInt(str.split(" ")[1]);
         int val = list.getAt(idx);
-        if(val != -1){
+        if (val != -1) {
           System.out.println(val);
         }
       }
