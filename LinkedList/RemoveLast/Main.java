@@ -1,4 +1,7 @@
 package RemoveLast;
+                        /*
+        " The pain you feel today will be the strength you feel tomorrow."
+                         */
 
 /*
 Remove Last In Linked List
@@ -67,6 +70,19 @@ Sample Output
 3
 50
 */
+/*
+ * Approch : 
+ *  when size == 0 print empety.
+ *  when size > 0 :
+ *     make a temp node and point to head.
+ *     when size =1 head = tail = null and update size--
+ *     travel the temp node in loop until before the tail node (temp.next.next !=null)
+ *     now after loop make tail = temp & tail.next = null (last node removed here)
+ *     size--; update
+ * 
+ */
+
+
 import java.io.*;
 
 public class Main {
@@ -192,9 +208,7 @@ public class Main {
             {
                 System.out.println("List is empty");
             } else if (size == 1) // when list have only 1 node
-            {
-                head = null; // removing element
-                tail = null;
+            {   head = tail = null;
                 size--;
             } else {
                 // when size is greater then 1
