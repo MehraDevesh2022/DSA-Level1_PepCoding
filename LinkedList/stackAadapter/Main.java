@@ -82,6 +82,20 @@ package stackAadapter;
 // 10
 // 1
 // 10
+/*
+ * Approch :
+ *  in stack LIFO system works
+ *  size() :
+ *  use size method of list
+ *  push() :
+ *  use addFirst()  method of list
+ * pop()  :
+ *  if size ==0 print and return -1
+ *   else use removeFirst() function of list given by Java itshelf
+ *  top() :
+ * if size ==0 print and return -1
+ *  else use getFirst() method from list of Java
+ */
 
 import java.io.*;
 import java.util.*;
