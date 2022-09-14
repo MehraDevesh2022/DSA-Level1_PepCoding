@@ -1,5 +1,10 @@
 package removeAt;
+                                 /*
+" Never give up on a dream just because of the time it will take to accomplish it. Time will pass anyway."
+                                   ~Earl Nightingale
+                                 */
 
+                                 
 // Remove At Index In Linked List
 // Easy
 
@@ -66,7 +71,18 @@ package removeAt;
 // 20 40 60 
 // 3
 // 40
-
+/*
+ * Approch :
+ *  when size == 0 print empty.
+ *  when idx ==0 remove first and size -- (call removeFirst())
+ *  when idx = size-1  removeLast and size -- (call removeLast())
+ *  when idx < 0 || idx>=0 print invalid
+ *  when idx >0 and <size-1
+ *   Make a temp Node and point to head. temp =head
+ *   move the temp.next in loop until before idx-1 
+ *   after loop update temp.next = temp.next.next (idx node removed here)
+ *   now size-- update
+ */
 import java.io.*;
 import java.util.*;
 
@@ -226,7 +242,6 @@ public class Main {
               temp=temp.next;
           }
           temp.next=temp.next.next;
-           
            size--;
       }
     }
