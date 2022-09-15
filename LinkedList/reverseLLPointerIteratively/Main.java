@@ -7,7 +7,7 @@ package reverseLLPointerIteratively;
  */
 
 
-// Reverse Linked List (pointer Iterative)
+// Reverse Linked List ( pointer Iterative)
 // Easy
 
 // 1. You are given a partially written LinkedList class.
