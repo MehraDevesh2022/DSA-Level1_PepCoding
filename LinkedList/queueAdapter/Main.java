@@ -1,6 +1,9 @@
 package queueAdapter;
 
-
+/*
+" Any code of your own that you haven't looked at for 6 or more months might as well have been written by someone else."
+                                                           ~Eagelson's Law
+ */
 
 /*
  * Linked List To Queue Adapter
