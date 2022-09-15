@@ -1,6 +1,13 @@
-package midLinkList;
+package midLinkedList;
 
-/*abstractMid Of Linked List
+/*
+    T'"he goal isn't to live forever, the goal is to create something that will."'
+                               ~ Chuck Palahniuk 
+ */
+
+
+ 
+/*Mid Of Linked List
 Easy
 
 1. You are given a partially written LinkedList class.
