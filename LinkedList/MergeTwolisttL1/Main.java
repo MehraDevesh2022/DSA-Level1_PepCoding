@@ -261,35 +261,35 @@ public class Main {
 
         public static LinkedList mergeTwoSortedLists(LinkedList l1, LinkedList l2) {
             // create a new linklist for storing data.
-            LinkedList add = new LinkedList();
+            LinkedList newList = new LinkedList();
             // create two node pointer for accesing l1 l2 linklist data
             Node one = l1.head;
             Node two = l2.head;
-            // check if any link lisy is empty
+            // check if any link list is empty
             if (l1.head == null || l2.head == null)
                 return (l1.head == null) ? l2 : l1;
             // check the condtion
             while (one != null && two != null) {
-                // compaire the value bcz we need list in shorting order
+                // compare the value bcz we need list in shorting order
                 if (one.data < two.data) {
-                    add.addLast(one.data); // pass the data in linklist for adding
+                    newList.addLast(one.data); // pass the data in linklist for adding
                     one = one.next;
                 } else {
-                    add.addLast(two.data); // pass data two new linklist
+                    newList.addLast(two.data); // pass data two new linklist
                     two = two.next; // sift the node to next node for access next data
                 }
 
             }
             // when a list is travel null and other is remains
             while (one != null) {
-                add.addLast(one.data); // if l1 data remains
+                newList.addLast(one.data); // if l1 data remains
                 one = one.next;
             }
             while (two != null) {
-                add.addLast(two.data); // if l2 data reamins
+                newList.addLast(two.data); // if l2 data reamins
                 two = two.next;
             }
-            return add; // return new linkrdlist
+            return newList; // return new linkedlist
         }
     }
 
