@@ -1,5 +1,12 @@
 package reverseLLPointerIteratively;
 
+/*
+                    Fix the cause, not the symptom.
+                           ~Steve Maguire
+  
+ */
+
+
 // Reverse Linked List (pointer Iterative)
 // Easy
 
@@ -48,6 +55,20 @@ package reverseLLPointerIteratively;
 // Sample Output
 // 60 20 30 40 50 
 // 50 40 30 20 60 
+
+/*
+ * Approch : 
+ * Make three Node ref variable : initial value  prv=null , curr =head , 
+ *  now itrate in loop untill curr != null
+ *  Fwd = curr.next (every time)
+ *  Make curr.next = prv each itration
+ *  prv = curr 
+ *  update curr to fwd..
+ * if loop ends then make tail to head and and head = prv
+ * 
+ */
+
+
 import java.io.*;
 import java.util.*;
 
@@ -170,6 +191,7 @@ public class Main {
         }
 
         public void removeLast() {
+            // write code here
             if (size == 0) {
                 System.out.println("List is empty");
             } else if (size == 1) {
@@ -230,7 +252,24 @@ public class Main {
         }
 
         public void reversePI() {
-            // write your code here
+            if (size == 0 || size == 1) {
+                return;
+            } else {
+                Node prv = null;
+                Node curr = head;
+                while (curr != null) {
+
+                    Node fwd = curr.next;
+                    curr.next = prv;
+                    prv = curr;
+                    curr = fwd;
+
+                }
+                tail = head;
+                head = prv;
+
+            }
+
         }
     }
 
@@ -286,3 +325,4 @@ public class Main {
         }
     }
 }
+
