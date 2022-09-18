@@ -1,12 +1,12 @@
 package midLinkedList;
 
 /*
-    T'"he goal isn't to live forever, the goal is to create something that will."'
+    '"The goal isn't to live forever, the goal is to create something that will."'
                                ~ Chuck Palahniuk 
  */
 
 
- 
+
 /*Mid Of Linked List
 Easy
 
