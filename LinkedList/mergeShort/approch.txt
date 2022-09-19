@@ -1,0 +1,39 @@
+Approach :
+Deducing Algorithm
+We know how to merge-sort an unsorted array. How can we use the concept we learnt there to solve this problem?
+
+As we know that merge sort is a Divide & Conquer Algorithm, we can solve a larger subproblem by dividing the problem into subproblems recursively, and combining the solved smaller problem to solve the larger problem.
+
+Q) How to divide the problem into subproblems?
+
+Similar to what we did in arrays, we will sort the first half of the linked list and the second half of the linked list separately.
+But, in arrays, getting the middle index to split the left & right ranges is easy, as we can randomly access any index in O(1) constant time.
+In the linked list, to get the middle node of the current range, we will have to do a traversal of the current range, as we cannot get direct access to the middle node.
+We know how to get the middle node of a linked list in one traversal using the concept of slow and fast pointers, right?
+I am not going to explain how to find the middle node of the linked list in this article again. We will use the function mid() which we wrote earlier directly.
+So, now we know how to find smaller subproblems. We will recursively call for the smaller subproblem, i.e. call mergeSort to sort the left part (from head to mid) and also call mergeSort to sort the right part (from mid->next to tail). On calling mergeSort recursively, we will get two new sorted lists.
+
+Q) How to combine the results of smaller subproblems to solve the current larger problem, i.e. sort linked list from head to tail?
+
+We have two linked lists which are in sorted order separately. Now, we need to merge these sorted linked lists into a single linked list, which should be sorted as well.
+We know how to merge two sorted linked lists, right? I am not going to explain how to write the merge operation, which we wrote earlier.
+Q) What should be the base case of the recursive merge sort function?
+
+When we have only one node in the range, then this node is already sorted. Hence, we will create a new node with the same value and return this new node.
+
+We are creating a new node, because we are required to make a new sorted list, and do not modify the original one.
+
+Pseudo Code
+If there is only one node in the linked list, (check if head == tail or not), then make a new node with data = head->val and return this new node.
+Else,
+Get the middle node of the linked list range [head, tail] as node mid, using mid() function.
+Recursively call for left and right subproblems as:
+Fsh = mergeSort(head, mid)
+Ssh = mergeSort(mid.next, tail)
+Now, merge two sorted linked list using merge() operation and get the sorted linked list from [head, tail] as
+sl = mergeTwoSortedLists(fsh, ssh)
+And return this linked list's head sl.
+Please refer to the solution video if you find difficulty in understanding the algorithm completely.
+
+
+Please I request you to give it a try before reading the code! Don't just blindly copy the code and submit it on any portal for the sake of completion. Doing so will not help you build an insight about Data Structures & Algorithms.
