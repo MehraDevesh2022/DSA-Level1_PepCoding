@@ -1,0 +1,29 @@
+Approach :
+Algorithm is very simple, since the original linked list given is already sorted. Hence, all the duplicates in the linked list will occur consecutively.
+
+Thus, we need to take only the first occurrence of every duplicate element in our resultant linked list.
+
+We will create an empty linked list res which will store the resultant linked list (without duplicates).
+
+Now, we will keep on removing the first node of the original linked list using the removeFirst() function and check whether to add it in the resultant linked list or not.
+
+If the resultant linked list is empty or the tail node is not equal to the current element, then we will add this current element in the resultant list using addLast() function, as it is the first (may or may not be the only) occurrence of the data element.
+
+Else, if the tail node's data is equal to the current node's data, then this node is not the first occurrence, hence we will not add it in the resultant linked list.
+
+Finally, we will get all the unique elements in the res linked list and the original linked list will become empty (as we did not traverse through it but kept on removing nodes).
+
+We will make this.head point to res.head and this.tail point to res.tail, and also make this.size equal to res.size. By doing so, we are making the original linked list point to the resultant linked list.
+
+Please refer to the solution video if you find difficulty in understanding the algorithm completely.
+
+Pseudo Code
+Create empty linked list res.
+While size of original linked list is greater than 0:
+Take the value of the first node's data in a variable val and remove the first node of this linked list using removeFirst() function.
+If the resultant linked list is empty (head = null), or tail node's value is not equal to val, then add a node in the last of the resultant linked list with data = val using addLast() function.
+Else, ignore the duplicate node and continue with the next iteration.
+this.head = res.head
+this.tail = res.tail
+this.size = res.size
+How about first trying by yourself without reading the code we provide?

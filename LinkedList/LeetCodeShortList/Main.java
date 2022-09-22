@@ -97,3 +97,83 @@ public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         return mergeTwoLists(head ,nh);
     }
 }
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ * int val;
+ * ListNode next;
+ * ListNode() {}
+ * ListNode(int val) { this.val = val; }
+ * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeSort(ListNode l1, ListNode l2) {
+
+        if (l1 == null || l2 == null) {
+            return l1 == null ? l2 : l1;
+        }
+
+        ListNode head = new ListNode(-1);
+        ListNode prv = head;
+
+        ListNode one = l1;
+        ListNode two = l2;
+
+        while (one != null && two != null) {
+            if (one.val < two.val) {
+                prv.next = one;
+                prv = one;
+                one = one.next;
+
+            } else {
+
+                prv.next = two;
+                prv = two;
+                two = two.next;
+            }
+
+        }
+        if (one != null) {
+            prv.next = one;
+        }
+        if (two != null) {
+            prv.next = two;
+        }
+        return head.next;
+
+    }
+
+    public ListNode midNode(ListNode head) {
+
+        if (head == null) {
+            return head;
+        }
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    public ListNode sortList(ListNode head) {
+        // edge case :
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode mid = midNode(head);
+        ListNode newHead = mid.next;
+        mid.next = null;
+
+        ListNode right = sortList(head);
+        ListNode left = sortList(newHead);
+
+        return mergeSort(right, left);
+
+    }
+}
