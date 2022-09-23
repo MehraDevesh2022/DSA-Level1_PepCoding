@@ -1,6 +1,11 @@
 package kthNode;
-          /*Programming is a skill best acquired by practice and examples rather than books. */
-/*
+
+          /*   Programming is a skill best acquired by practice and examples rather than books.   */
+
+          
+
+ /*
+
 Kth Node From End Of Linked List
 Easy
 

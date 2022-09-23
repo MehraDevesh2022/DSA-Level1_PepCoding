@@ -191,7 +191,7 @@ public class Main {
         }
 
         public void removeLast() {
-            // write code here
+           
             if (size == 0) {
                 System.out.println("List is empty");
             } else if (size == 1) {
@@ -252,6 +252,7 @@ public class Main {
         }
 
         public void reversePI() {
+            // write code here
             if (size == 0 || size == 1) {
                 return;
             } else {
