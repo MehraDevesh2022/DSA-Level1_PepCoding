@@ -27,24 +27,32 @@ public class tabulation {
            return dp[N]; // finally return Nth idx  value of N fibonacci  number
      }
 
-     // method 2nd =>
+     // method 2nd => 
      public static int tabulation2(int n){
-         int dp[] = new  int[n+1];
+         int dp[] = new int[n+1];
 
          dp[0] = 0;
          dp[1] = 1;
 
          for(int i=2; i<dp.length; i++){
-            dp[i] = dp[n-1] + dp[n-2]; // from : fn(n) = fn(n-1) + fn(n-2);
+            dp[i] = dp[i-1] + dp[i-2]; // from : fn(n) = fn(n-1) + fn(n-2);
+            
          }
          return dp[n];
      }
      public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        // method first :
-        int dp[] = new int[n+1]; 
-        int ans = febTabulation(n ,dp);
-        System.out.println(ans);
+
+
+        // method first :  just for show case
+        // int ans = tabulation2(n);
+
+        // method second : we will use it 
+         int dp[] = new int[n + 1];
+          int ans = febTabulation(n ,dp);
+
+
+          System.out.println(ans);
     }
 }
