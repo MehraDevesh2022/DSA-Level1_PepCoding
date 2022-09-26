@@ -37,7 +37,7 @@ import java.util.*;
 
 
 
-public class Main {
+public class memoization {
   public static int normalFabonacci(int n){
    if(n<=1){
     return n;
