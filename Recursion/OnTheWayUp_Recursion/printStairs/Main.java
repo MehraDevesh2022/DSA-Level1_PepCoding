@@ -40,9 +40,9 @@ public class Main {
   return;
     }
      if(n-1>=0)   
-    printStairPaths(n-1, path+"1");
+    printStairPaths(n-1, path+"1"); // n-1 means 1 step is done after that 2 steps remains when only there 3 stairs are there
     if(n-2>=0){
-        printStairPaths(n-2, path+"2");
+        printStairPaths(n-2, path+"2"); // n-2 ,means after that only one step remain for 3 stair
         if(n-3>=0)
         printStairPaths(n-3, path+"3");
     }
