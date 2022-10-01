@@ -69,7 +69,7 @@ public class Main {
      
           // base 
        if(sr == maze.length-1 && sc ==maze[0].length-1){
-         System.out.println(asf);
+        //  System.out.println(asf);
          return;
        }
        // mark

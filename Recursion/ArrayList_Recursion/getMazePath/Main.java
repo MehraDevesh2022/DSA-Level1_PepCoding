@@ -44,12 +44,13 @@ public class Main {
     // sc - source column
     // dr - destination row
     // dc - destination column
+   
     public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
+   
         if (sr == dr-1 && sc == dc-1) {
-
-            ArrayList<String> base = new ArrayList<>();
-            base.add("");
-            return base;
+              ArrayList<String> base = new ArrayList<>();
+              base.add("");
+              return base;
         }
 
         ArrayList<String> myAns = new ArrayList<>();
