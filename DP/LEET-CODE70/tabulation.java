@@ -41,27 +41,32 @@ Submissions
 3,667,397
  */
 
-class Solution {
-
-    public int climbStairs(int N) {
-        int dp[] = new int[N + 1];
-        for (int n = 0; n < dp.length; n++) {
-
-            if (n == 0) {
-                dp[n] = 1;
+// using tabulation =>
+class tabulation {
+    public int stairPath(int SRC, int dst, int dp[]) {
+        // flow goes right to left
+        for (int src = dst; src >= 0; src--) {
+            if (src == dst) {
+                dp[src] = 1;
                 continue;
             }
+            // 2 jump only
             int count = 0;
             for (int jump = 1; jump <= 2; jump++) {
-                if (n - jump >= 0) {
-                    count += dp[n - jump];
+                if (src + jump <= dst) {
+                    count += dp[src + jump];
                 }
 
             }
-            dp[n] = count;
-            ;
+            dp[src] = count;
         }
-        return dp[N];
+        return dp[SRC]; // return steps from 0th idx
     }
 
+    public int climbStairs(int n) {
+        int dp[] = new int[n + 1];
+        return stairPath(0, n, dp);
+    }
 }
+
+
