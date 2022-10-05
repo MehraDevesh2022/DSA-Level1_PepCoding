@@ -69,22 +69,30 @@ import java.util.Scanner;
   
 
     public static void goldmine(int n, int m, int[][] arr, int[][] dp) {
-       for(int j=m-1; j>=0; j--){
+      // we need to travel row wise 
+        for(int j=m-1; j>=0; j--){
         for(int i=0; i<n; i++){
+            // when we are in last clm tab sari value arr ki dp main daal do. bcz further there is no value these are last block
             if(j==m-1){
                 dp[i][j] = arr[i][j];
             }
+            // jab jab i==0 ho tab do call possible hai
             else if(i==0){
                 int max  = Math.max(dp[i][j+1], dp[i+1][j+1])  + arr[i][j];
+               // store max gold so far
                 dp[i][j] = max;
             }
+            // jab i==n-1 tab bhi sirf do call possible hai dp[i+1][j+1] krke hum ghde main gi jainge
             else if(i==n-1){
                 int max  = Math.max(dp[i-1][j+1], dp[i][j+1]) + arr[i][j];
+                // store max gold so far
                 dp[i][j] = max;
 
             }
             else {
+                // jab teen ki teen call possbile ho teeno ka max leke apni cost add kr do 
                 int max  = Math.max(dp[i-1][j+1] , Math.max(dp[i][j+1] , dp[i+1][j+1]));
+               // teeno step ka max leke apne block ki cost add kr do
                 dp[i][j] = arr[i][j] +max;
             }
 
@@ -94,12 +102,15 @@ import java.util.Scanner;
     }
     
     public static int findMax(int[][] dp) {
-          int max = Integer.MIN_VALUE;
+        // all cost 3 step lene ke baad 1st row main store ho jaingi dp ki(left wall) se (right wall) dig knre ki cost
+        int max = Integer.MIN_VALUE;
+        // travel only first row and find max cost
           for(int i=0; i<dp.length; i++){
             if(max < dp[i][0]){
                 max = dp[i][0];
             }
           }
+          
            return max;
     }
 
