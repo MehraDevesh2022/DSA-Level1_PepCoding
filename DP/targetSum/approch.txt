@@ -1,0 +1,39 @@
+Approach : 2 (Using Dynamic Programming)
+Let us first discuss HOW we will solve this problem using DP. After understanding the algorithm, we will analyze WHY we did so.
+
+We will make a 2D array (dp tabulation array) of size ((n + 1) X (tar + 1)) where n = size of array and tar is the target value. Hence n + 1 will be the number of rows, whereas tar + 1 will be the number of columns.
+
+What is the meaning of cell dp[i][j]? It represents whether we can make a subset from array elements of index {0, 1, ... i-1} whose sum is equal to j.
+
+For Example:
+
+img
+The cell marked with *, represents whether there exists a subset of {4, 2, 7} (which is {arr[0], arr[1], arr[2]}) whose sum is equal to 5.
+
+The first row represents an empty array. The first cell in the first row (dp[0][0]) represents whether the empty array has sum = 0 or not. array has sum = 0, only the first cell will be true, rest all cells in the first row will be false.
+The first column represents whether there is a subset with target = 0. Since every prefix array (array from index 0 to i) can have an empty subset whose target = 0, hence all cells in the first column can be marked as true.
+Now, we will run a loop for every array element (representing the rows in dp table). We will run another nested loop from target value 1 to sum.
+Hence, at row = i and column = j, we are checking whether there exists a subset from the prefix array {0, 1, ... i-1} whose sum = j.
+We can have two options for the current element: whether to include it in the subset formed by the elements before it, or not to include it in the subset.
+If we include the array element, then we have to check if there exists a subset from previous array elements, whose sum = j - arr[i-1]. Hence, we will check if j - arr[i-1] >= 0 (to avoid out of bound index) and if dp[i-1][j - arr[i-1]] = true, then we make dp[i][j] as true.
+If we do not include the array element, then we will have to check if there exists a subset from previous array elements whose sum = j itself. Hence, we will check if dp[i-1][j] = true, then we will make dp[i][j] as true.
+In the last, we will check if the whole array can make a subset whose sum = target or not. That is, we return the value of dp[i][tar].
+Important Note:
+DP[i][j] = DP[i-1][j] OR DP[i-1][j - arr[i-1]]
+
+Please remember that the first row in the dp table represents zero elements or empty subarray, hence row dp[i] corresponds to arr[i-1] element.
+Also remember, for checking the value of dp[i-1][j - arr[i-1]], we are first checking whether j - arr[i-1] >= 0 or not. If arr[i-1] is greater than j, then the remaining sum will become negative, but we do not have any index representing a negative target.
+Analogy to Cricket:
+You can try to think of this problem analogous to a cricket match.
+Try to think that the array elements are the runs that can be scored by a player, and make target sum analogous to the total score required to chase.
+Making a subset of an array is analogous to picking a team from the squad.
+Hence for every player, we will check if the team without him/her can score runs = j or not.
+If he is included in the team, then we will check if the rest of the team can score the rest of the runs required to achieve total or not, i.e. (j - arr[i-1]).
+WHY are we using this approach?
+If you will carefully see, then we are not re-computing all the subsets from the prefix array of previous elements, i.e. we are not generating all the subsets first and then choosing whether to add the current element to them or not. Instead, we are just using the result of whether any subset of previous elements can have a given sum.
+
+Hence, we are reducing the exponential time complexity to somewhat pseudo polynomial time complexity.
+
+Note: We are saying it as pseudo polynomial time taking, as the time complexity will also depend on the value of target, which in turn does not depend on the number of elements (n).
+
+Note: Before reading the Code, we recommend that you must try to come up with the solution on your own. Now, hoping that you have tried by yourself, here is the Java code.
