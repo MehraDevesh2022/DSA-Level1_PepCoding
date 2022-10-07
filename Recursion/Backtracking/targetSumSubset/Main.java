@@ -69,8 +69,7 @@ public class Main {
             return;
         }
         if (idx == arr.length) {  // arr.length is base case bcz if there 0 is value in any idx so that will also included as a set [10,20,30,40,50,0]
-            if (sos == tar)
-                System.out.println(set + ".");
+            if (sos == tar) System.out.println(set + ".");
             return;
         }
        // when include

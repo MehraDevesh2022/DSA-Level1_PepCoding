@@ -62,11 +62,11 @@ public class Main {
     public static int coinCombination(int[] arr, int[] dp, int tar) {
         // zero coin will come every time with every combination 
         dp[0] = 1;
-       for(int i=0; i<arr.length; i++){
-        for(int j=1; j<dp.length; j++){
-            if(j - arr[i] >=0){
+       for(int coin=0; coin<arr.length; coin++){
+        for(int d=1; d<dp.length; d++){
+            if(coin - arr[d] >=0){
            
-                    dp[j] += dp[j-arr[i]];
+                    dp[d] += dp[d-arr[coin]];
                 
             }
         }
