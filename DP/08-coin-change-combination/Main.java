@@ -1,4 +1,7 @@
-
+/*
+ * The most damaging phrase in the language is.. it's always been done this way
+                                 ~ Grace Hopper
+ */
 
 /*                           
                           
@@ -39,6 +42,15 @@ Sample Input
 Sample Output
 2
  */
+// approch =>
+/*
+ * in combination only no repataion allowd 
+ * eg : coins(2,3,5) and target  7 => result will be :  2,2,3 || 2 , 5 
+ *  it will not work like => 223 ,232, 322, 25 , 52 this is permuation and here repation is occures
+ * for combination we are using coin first for every targert amount an looking for payment possible or not
+ * for target 2 => 2-2=0 and way to pay zero is 1 do nothing
+ *  after 2 coin every target 0-7 we use 3 then 5 it will make sure only one way to possible for payement 
+ */
 
 
  import java.io.*;
@@ -63,15 +75,15 @@ public class Main {
         // zero coin will come every time with every combination 
         dp[0] = 1;
        for(int coin=0; coin<arr.length; coin++){
-        for(int d=1; d<dp.length; d++){
-            if(coin - arr[d] >=0){
+        for(int currTar=arr[coin]; currTar<dp.length; currTar++){ //curTar = arr[coin] bcz if taregt 2 and coin 3 then teher is no way to payment 2 with three rs so we checking coin from near by target
+            if(coin - arr[currTar] >=0){
            
-                    dp[d] += dp[d-arr[coin]];
+                    dp[currTar] += dp[currTar-arr[coin]];
                 
             }
         }
        }
-        return dp[tar];
+        return dp[tar]; // when finally taregt archived for given test case in idx 7
     }
 }
  

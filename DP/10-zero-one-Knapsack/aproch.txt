@@ -1,0 +1,20 @@
+Problem Discussion :
+We are given n items. We are given an array that tells us about the price of those items and we are also given an array that tells us about the weight of those items. This can be visualized as follows:
+
+img
+We can visualize this as follows. 2 units weight of the 0th item costs 15 units of money. Similarly, 5 units weight of 1st costs 14 units money and so on. We have a bag and we know the capacity of the bag (we will be given the capacity of the bag). We have to make the price of this bag maximum. For instance, in the above example, we can have only 7 units weight of the items as the capacity of the bag is 7. The maximum price of the bag will be 75. How? Think about this!!!!!! You may refer to the 0-1 KNAPSACK PROBLEM video to understand the problem. Note that it is the 0-1 knapsack problem. Every item can either be selected completely or can be dropped. But we cannot break the item and select it. What do we mean by this? We mean that if we have an item whose price for 2 units weight is 20, then either we can include the complete 2 units weight of the object or we can drop the object (i.e. not select it). But we cannot select 1 or 1.5 units weight of that object. Also, we cannot select a single item multiple times. We can select one item completely and only once.
+
+
+Method-1: Using recursion and Backtracking
+Approach :
+A diagram is also shown below to give you a kickstart and help you a little bit in thinking about the recursive approach.
+
+img
+This is not the complete Euler tree. It is just a part of it to give you an idea of what we are doing. We either select or reject each element at every level to keep in the bag. For instance, we start with 2-15 means element 0 which has weight 2 and price is 15. If we take it in the bag the capacity of the bag now remains 5 else it remains the same i.e. 7. At the next level if we already took element 0 and we take the next element too, then the capacity becomes 0 and we have to return. So, this is one base case that we can think of. There is another base case. Think of it and write the code yourself!!!
+
+
+The complete Java code for the 0-1 knapsack problem using backtracking and recursion is given below:
+
+Pseudo Code for Backtracking method
+Have you thought about the solution to this problem yet? We recommend you to think about this problem once. So, do you know any similar question or similar method by which we can solve this problem? Well, you have solved the problems GET SUBSEQUENCEand PRINT SUBSEQUENCE. This problem can also be solved using the same technique by modifying that method.
+To give you an idea about that method, what we will do is that we will make a choice at each level of the recursive tree whether an item can be included or not be included taking in mind the capacity of the bag. We will have a lot of base cases reached in our tree. Then we will compare all the base cases and find out the max cost from it. That will be our answer. You may refer to the 0-1 KNAPSACK PROBLEM VIDEO for some hint on the recursion method. You may also refer to the GET SUBSEQUENCE and PRINT SUBSEQUENCE solution videos to understand the procedure of solving such problems.
