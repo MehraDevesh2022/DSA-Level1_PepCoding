@@ -49,6 +49,7 @@ Sample Output
      }
     public static void substring(int[] arr) {
          int n = arr.length;
+         // substring of n is always 2 power n substring dega so for 3 => 0 se 8 tak 9 substring
            for(int i=0; i<(int)Math.pow(2, n); i++){
                 int val = DectoBinary(i);
                  String str ="";

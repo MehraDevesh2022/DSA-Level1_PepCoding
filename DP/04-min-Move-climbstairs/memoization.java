@@ -31,11 +31,11 @@ public class memoization {
         for(int i=0; i<n; i++){
             arr[i] =scn.nextInt();
         }
-        int dp[] = new int[n+1];
+        Integer dp[] = new Integer[n+1];
         int ans = minClimbStairs(0 , n , arr, dp);
         System.out.println(ans);
     }
-   public static int minClimbStairs(int src , int dst , int arr[] , int dp[]){
+   public static int minClimbStairs(int src , int dst , int arr[] , Integer[] dp){
             if(src == dst){
                 return dp[src] =0;
             }

@@ -72,25 +72,30 @@ public class Main {
     public static int Knapsack(int values[] , int weights[] , int dp[][], int taregt){
         for(int  i=0; i<dp.length; i++){
             for(int j=0; j<dp[0].length; j++){
-                   if(j==0){
+                //when bag has  zero capicity   
+                if(j==0){
                     dp[i][j] =0;
                    } 
+                   // when there is no itam to fill bag
                    else if(i==0){
                     dp[i][j] = 0;
                    }
                    else{
+                    // when item not picked then we add prv item picked for same capicity
                     int notPicked = dp[i-1][j];
                     int picked =0;
+                    // check is weight is less than or not  to the bag capicity
                     if(j-weights[i-1]>=0){
                     picked = values[i-1] + dp[i-1][j-weights[i-1]];
                    }
+                   // now check wich one cost is more
                     dp[i][j] = Math.max(picked, notPicked);
                 }
                   
        
             }
         }
-
+// rerun target value
  return dp[values.length][taregt];
         
     }
