@@ -77,7 +77,7 @@ public class Main {
                            
                        }
             }
-           // max profit from valuse at this capacity
+           // max profit from values at this capacity
             dp[tar] = max;
         }
         
