@@ -1,0 +1,93 @@
+Problem Discussion :
+After going through the problem we understand that:
+
+You are given a number n, representing the count of elements.
+You are given n numbers, representing n elements.
+You are required to find the maximum sum of a subsequence with no adjacent elements.
+We discuss this problem through the following example:
+
+img
+Figure 1 denotes the input of n elements when n=5.
+
+The total number of subsets for n=5 is 25 =32 as each element has 2 choices: whether to be included or not.
+
+Out of these 32 subsets , those subsets are invalid in which consecutive elements are selected.
+
+Now, out of those remaining valid subsets, we have to find the subset with the largest sum.
+
+Approach :
+BRUTE FORCE
+Can you think of a Brute force method to solve this?
+
+We say you can just find out all the valid subsets and find the maximum sum out of all of them.
+
+Let's see how
+
+img
+In figure 2, starting from the bottom of this inverted tree, first element 5 has 2 choices: to be included or excluded.
+
+As we have to honor the condition that no subset could have adjacent elements, therefore if 5 was included previously then the next element i.e. 10 has to be excluded.
+
+However, if 5 was excluded previously from the subset then the next element 10 may or may not be included in the subset.
+
+And all these choices give way to more choices.
+
+
+BUT,
+
+We always try to find an optimized solution. What do you think it's time complexity is? That right O (2n). This isn't desirable!
+
+So, we now try a different approach using Dynamic Programming for this problem.
+
+We break this approach into 3 parts: WHAT, WHY and HOW.
+
+WHAT
+Reader, just focus on the "What" of this question right now. Don't worry about "WHY" and "HOW".
+
+STORAGE & MEANING
+We make an array for DP of the dimensions 2*n.
+
+img
+In figure 3, the meaning assigned to a cell 1 is "What is the maximum sum out of the valid subsets ending with 10".
+
+In figure 2, the meaning assigned to a cell 2 is "What is the maximum sum out of the valid subsets not ending with 10".
+
+img
+DIRECTION
+We always try to solve the question for a simpler and smaller problem via which we move on to the bigger problem.
+
+Let's start from the first element 5.
+
+5 initially has 2 options : to be included or not. If it is included then the maximum sum is 5, else if 5 is to be excluded then the maximum sum remains 0.
+
+img
+Now we move on to the second element, 10. For 10 to be included it's necessary that the previous element is excluded. So to find the maximum sum till 10 we add 10 to the maximum sum of 5 when 5 is excluded.
+
+img
+Now if we choose to exclude 10 then, it is possible that the previous element 5 may or may not be included. So we choose the maximum of those options to get the maximum sum. As 5>0, therefore if 10 is excluded then the maximum value is 5.
+
+img
+Similar method is applied for calculating all the cells of this array.
+
+Try to fill this DP array yourself and then check your answer with ours.
+
+img
+When our DP array is full, we find the maximum of the include and exclude of the last element. This is our answer according to "Meaning" assigned to each cell.
+
+Here the "include" for last element is 20 and the "exclude" is 110. As 110>20, therefore 110 is the maximum sum for non-adjacent elements.
+
+WHY/TRAVERSAL
+Read the following explanation very attentively as it builds a base for the "GREEDY" approach.
+
+img
+As already discussed in "Direction" , we if 5 is included then max sum is 5 and if it's excluded then the maximum sum is 0+10=10.
+
+Now coming to the next level for element 10. Here, for inclusion of 10, there is only one path in the tree (the ticked part).However for exclusion of 10 we have 2 paths as highlighted in yellow and blue.
+
+Reader, you must have a question in your mind that why we include only the maximum path when the tree is made is for 2 paths.
+
+It is so because if you see clearly, the yellow and blue paths are the same.
+
+The only difference is that for yellow path '5' occurs in front and for blue path a blank occurs in front. Rest of their paths are the same. Hence we choose the path which gives us the maximum sum which is the path with 5.
+
+We highly request you to watch "Maximum Sum Non-Adjacent Elements" for an extensive tree traversal discussion.

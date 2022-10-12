@@ -1,3 +1,7 @@
+// Ever'body's askin' that. 'What we comin' to?' Seems to me we don't never come to nothin'. Always on the way.
+//                                              ~John Steinbeck
+
+
 // Maximum Sum Non Adjacent Elements
 // Easy  Prev   Next
 // 1. You are given a number n, representing the count of elements.
