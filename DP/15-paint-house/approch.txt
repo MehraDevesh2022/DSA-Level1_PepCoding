@@ -1,0 +1,46 @@
+Problem Discussion :
+You are given a number n, representing the number of houses.
+In the next n rows, you are given 3 space separated numbers representing the cost of painting nth house with red or blue or green color.
+You are required to calculate and print the minimum cost of painting all houses without painting any consecutive house with the same color.
+
+
+
+Approach :
+STORAGE & MEANING
+We make an array for DP of the dimensions same as that of the input array i.e. 3*n.
+
+The meaning assigned to a single cell in this grid is that "if we paint the house at hand with a color then what will be the minimum cost for it".
+
+DIRECTION
+We always try to solve the question for a simpler and smaller problem via which we move on to the bigger problem.
+
+We want you to meditate on the fact that if we had started from the first column i.e. for the first house, then the minimum cost will be the same as that of the input cost.
+
+This is possible because the painting of the first house is not dependent on the colors of any other house.
+
+img
+Figure 2 is the DP array (drawn in green to differentiate from the input array).
+
+Now let's discuss the traversal for house 2.
+
+We ask ourselves, if it's mandatory to paint the second house with red color, what will be the minimum cost such that no adjacent houses have the same color.
+
+For that we paint house 2 with Red but make sure that house 1 is not painted with it. This means that now house 1 has to choose from paints blue and green. So, it will choose the paint which has the minimum cost. In this case, the cost of blue=5 and cost of green =7.Hence, blue is chosen.
+
+According to our above discussion, the minimum cost to paint House 2 with red is the sum of the cost of red paint for house 2 and the minimum cost of the remaining 2 colors for house 1 i.e. 5+5=10.
+
+Same method is used to find the minimum cost of the rest of the colors.
+
+We want you to try filling this new DP array yourself and then check your answer with ours.
+
+img
+We want you to refer to "Paint House" Solution video for a better understanding of the traversal.
+
+
+Eventually our final answer will be the minimum cost of all the paints for house 4. This is so because the painting of house 4 is dependent on the rest of the houses such that our conditions are satisfied.
+
+Hence the minimum out of the cost of red, the cost of blue and the cost of green i.e. 8, 10 and 11 is 8.
+
+So our answer to the problem is 8.
+
+You must have got a little hang of dynamic programming questions by now , which is why we want you to first give writing the code a try yourself. Don't beat yourself up if you are not able to. DP problems can be a bit tricky.
