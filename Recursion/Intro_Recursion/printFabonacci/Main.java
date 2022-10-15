@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-//  n fabonacci numser uing recursion
+//  n fabonacci numser using recursion
 
 public class Main{
 
@@ -11,6 +11,7 @@ public static int printFabonacci(int n){
 
     // call :
    int ans1 = printFabonacci(n-1);
+
     int ans2 = printFabonacci(n-2);
     int myAns = ans1 + ans2;
     
