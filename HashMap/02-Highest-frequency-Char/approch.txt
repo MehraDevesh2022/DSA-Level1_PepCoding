@@ -1,0 +1,19 @@
+Approach :
+ArrayList Filling Approach
+We consider another string for explanation purposes.
+
+img
+We make a Hashmap table for the above string as shown in Figure 3.
+
+img
+We iterate through every character of the string and subsequently increase the count against it.
+
+
+Code Discussion
+We create a new Hashmap of Character vs Integer named "hm".
+We iterate through all the characters of the string and check if the hashmap contains the given character. If it does, then, we get the frequency of that character and store it in "old". Then, we increase it by 1 and store it in "now".
+This "now" gets inserted in the hashmap against that character.
+Else if the hashmap doesn't already contain that character then we add it to hashmap against count 1.
+We initialize a variable "max" with the first character of the given string where "max" is the character with highest frequency.
+We apply the for loop for every character of the Hashmap. If the frequency of the current character is greater than the frequency of "max", then that character gets stored in "max".
+After comparing the frequency of all the characters we print the "max".
