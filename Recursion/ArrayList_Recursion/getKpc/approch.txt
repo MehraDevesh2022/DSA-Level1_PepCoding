@@ -1,0 +1,17 @@
+Approach :
+Let's understand the approach through High Level Thinking using the above example of 573.
+
+Set Expectation : We expect that if we take a string, say, "573" , then the output should be as shown in Figure 2 .
+Build Faith : We must have faith that if our code can give us an output for string "573", then it can definitely give us an output for string "73". You just need to believe. Don't focus on "HOW" that will happen.
+Expectation meets Faith : For printing the desired keypad combinations for string "573", "5" will manifest itself as m/n/o/p , and we add each of these characters for "5" to every output of "73".
+
+
+Code Discussion
+We form a global array of strings called "codes" which store the key to character elements where key is the index of the element and characters are the characters of the string at that index.
+Base Case: If the string length reaches 0, then a new ArrayList bres is created .A blank is added to it and it is returned.
+We separate the first element i.e. "5" of the given string and store it in char ch.
+Next we store the remaining part of the given string i.e "73" in the string ros.
+The function getKPC is recursively called on ros and we have faith that it will provide us the keypad combinations for string "73".
+In coding , "6" != 6 . The former is a character 6 and latter is an integer 6. So to convert a character into an integer we write the given code.
+We apply a for loop for every keypad combination of "73" which is stored in rres and then add each character corresponding to "5" to every output of "73". This is eventually added in our final ArrayList mres.
+At last, we return our final ArrayList mres where the output for "573" is stored.

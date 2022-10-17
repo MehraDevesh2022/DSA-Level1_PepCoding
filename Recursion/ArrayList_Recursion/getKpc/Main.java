@@ -72,8 +72,8 @@
       String currStr = code[idx];
       for(int i=0; i<currStr.length(); i++){
 
-        for(String j : recAns){
-            myAns.add(currStr.charAt(i)+j);
+        for(String val : recAns){
+            myAns.add(currStr.charAt(i)+  val);
         }
       }
       return myAns;
