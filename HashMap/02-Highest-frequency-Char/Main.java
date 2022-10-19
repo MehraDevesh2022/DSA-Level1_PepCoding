@@ -49,6 +49,7 @@ public class Main {
         }
 
           char maxFreqeuncyKey = str.charAt(0);
+          // keySet() method retuns all key from hashmap
           for(Character key : hm.keySet()){
              if(hm.get(key) > hm.get(maxFreqeuncyKey))
              maxFreqeuncyKey = key;
