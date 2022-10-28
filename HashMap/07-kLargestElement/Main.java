@@ -8,7 +8,7 @@
  * increasing order.
  * Input Format
  * Input is managed for you
- * Output Format
+ * Output Format 
  * Print the k largest elements of array in increasing order in separate lines.
  * Question Video
  * 
@@ -39,7 +39,6 @@
  * 99
  */
 import java.io.*;
-import java.rmi.server.RemoteServer;
 import java.util.*;
 
 public class Main {
