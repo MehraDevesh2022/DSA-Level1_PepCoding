@@ -40,3 +40,74 @@
  * 6
  * 7
  */
+// approch >
+// insert first k elm into pq bcz elm will either up to k step will left or right
+// after adding k elm . remove and print from pq and add new elm from array
+// remain k elm will remove and print
+ import java.io.*;
+import java.util.*;
+
+public class Main {
+
+   public static void main(String[] args) throws Exception {
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+
+      for (int i = 0; i < n; i++) {
+         arr[i] = Integer.parseInt(br.readLine());
+      }
+
+      int k = Integer.parseInt(br.readLine());
+      // write your code here
+      PriorityQueue<Integer> pq = new PriorityQueue<>();
+      for(int i=0; i<arr.length; i++){
+        if(i<=k){
+            pq.add(arr[i]);
+        }else{
+            System.out.println(pq.remove());
+            pq.add(arr[i]);
+        }
+      }
+      while (pq.size() != 0) {
+          System.out.println(pq.remove());
+      }
+   }
+  
+
+}
+
+// second way :
+
+// import java.io.*;
+// import java.util.*;
+
+// public class Main {
+
+//     public static void main(String[] args) throws Exception {
+//         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//         int n = Integer.parseInt(br.readLine());
+//         int[] arr = new int[n];
+
+//         for (int i = 0; i < n; i++) {
+//             arr[i] = Integer.parseInt(br.readLine());
+//         }
+
+//         int k = Integer.parseInt(br.readLine());
+
+//         PriorityQueue<Integer> pq = new PriorityQueue<>();
+//         for (int i = 0; i <= k; i++) {
+//             pq.add(arr[i]);
+//         }
+
+//         for (int i = k + 1; i < arr.length; i++) {
+//             System.out.println(pq.remove());
+//             pq.add(arr[i]);
+//         }
+
+//         while (pq.size() > 0) {
+//             System.out.println(pq.remove());
+//         }
+//     }
+
+// }
