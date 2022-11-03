@@ -39,6 +39,9 @@
  * 5
  * 6
  * 7
+ * 8
+ * 9
+ * 
  */
 // approch >
 // insert first k elm into pq bcz elm will either up to k step will left or right

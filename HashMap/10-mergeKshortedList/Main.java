@@ -27,16 +27,78 @@
  * Sample Output
  * 1 2 3 5 7 9 10 11 19 20 30 32 39 40 50 55 57
  */
+/*
+ * approch : 
+ *  we have given arraylist of lists just like 2d array little bit
+ *  first make triplet class interface
+ *  triplet data type contains 3 things int type list , idx of list and val of list
+ *  make a comparateble function at tripelet class for priority queue shake of  value comparision among list idx and val which one use in min priority queue
+ *    Solution in main function =>  
+ *       now : make ans Array list
+ *           : make priority queue
+ *           : add all lists 0 idx value in pq (with => list-no_idx_val)
+ *           : now remove elm of priority queue untill it not empty and store refence inside temp triplet data type 
+ *           :  add temp.val in ans array list
+ *           : now make newLi =temp.li for next value
+ *           :  make newidx  = temp.idx for next value
+ *           :  make newVal = temp.val
+ *           now add make new triplet temdata  and use (newList , newidx , newVal) for finding new value from all list 
+ *            add then tempData into pq
+ *     repeat untill all list elm not added into ans arrayList
+ *     return ans arrayLiast
+ *  
+ *            
+ */
 import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static ArrayList<Integer> mergeKSortedLists(ArrayList<ArrayList<Integer>> lists) {
-        ArrayList<Integer> rv = new ArrayList<>();
 
+    public  static class triplet implements Comparable<triplet>{ //  this interface bcz using implements here 
+       int li; // which list is from lists
+       int idx; // which elm from list
+       int val; // value from list at idx
+
+       triplet(){
+
+       }
+       triplet(int li , int idx , int val){
+         this.li = li;
+         this.idx = idx;
+         this.val  = val;
+       }
+    public int compareTo(triplet o){ // o => others use anything
+     return this.val -o.val; // this will return min value for priority queue (o.val -this.val => it will return max value || also use idx and li then compare happen based on these in priority queue)
+    }
+    }
+
+    public static ArrayList<Integer> mergeKSortedLists(ArrayList<ArrayList<Integer>> lists) { // lists are list of k array list
         // write your code here
+        ArrayList<Integer> ans = new ArrayList<>();
+        PriorityQueue<triplet> pq = new PriorityQueue<>();
+        for(int i=0; i<lists.size(); i++){ // get all list 0 idx value and store them into pq using triplet object
+           triplet temp = new triplet(i, 0 , lists.get(i).get(0));
+           pq.add(temp);
+        }
+         // now empty pq and store each list value with shorting order and add ans list all of them
+         while(pq.size()>0){
+            triplet top = pq.remove();
+            ans.add(top.val);
 
-        return rv;
+
+            // now for next we need refrence of list , idx , and value 
+            int newLi = top.li;
+            int newIdx = top.idx+1;
+            // check if list empty
+            if(newIdx < lists.get(top.li).size()){
+                 int newVal  = lists.get(newLi).get(newIdx); // lists.get(newLi).get(newIdx) (girst getting list from all list) then getting value of that list using idx
+                 // now make new triplet obj  with list , idx, and value then add to pq
+                 triplet temp = new triplet(newLi , newIdx , newVal);  // making temp triplet obj where this will store refrence list=>i from k lists , idx =0 of list , value of getting int newVal = // lists.get(newLi).get(newIdx);
+                 pq.add(temp);
+            }
+         }  
+
+        return ans;
     }
 
     public static void main(String[] args) throws Exception {
