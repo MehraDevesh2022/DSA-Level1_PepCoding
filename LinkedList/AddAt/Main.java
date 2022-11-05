@@ -12,7 +12,7 @@ Easy
 2. Here is a list of existing functions:
    2.1 addLast - adds a new element with given value to the end of Linked List
    2.2. display - Prints the elements of linked list from front to end in a single line. All 
-   elements are separated by space
+        elements are separated by space
   2.3. size - Returns the number of elements in the linked list.
   2.4. removeFirst - Removes the first element from Linked List. 
   2.5. getFirst - Returns the data of first element. 
