@@ -1,0 +1,16 @@
+ heap is tree loke data structure
+ every heap is binray tree but not every binary tree are heap type. bcz heap is cbt type tree follows hop
+ heap is  either min root type or max root compare to children node type just like pq
+ heap always ==>
+  cbt : complete binary tree
+  hop : heap order priority (all roots either min or max type) 
+   
+   bcz of cbt behavior we have formula for heap to get parent node or left child or right child node
+   formula : 
+    lci = 2 * pIdx + 1 ( for geting left child idx)
+    rci = 2 * pIdx + 2  ( for geting right child idx)
+    pi  = cIdx - 1 /2  ( for geting parent child idx)
+
+    pi ==> parent index
+    lci ==> left child Idx
+    rci ==> right child Idx
