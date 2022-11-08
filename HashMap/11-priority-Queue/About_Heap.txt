@@ -1,7 +1,7 @@
- heap is tree loke data structure
+ heap is tree like data structure
  every heap is binray tree but not every binary tree are heap type. bcz heap is cbt type tree follows hop
- heap is  either min root type or max root compare to children node type just like pq
- heap always ==>
+ heap is  either min  type or max type. all roots are min as compare to there children if heap is min type same for max type as well
+ heap is follows  ==>
   cbt : complete binary tree
   hop : heap order priority (all roots either min or max type) 
    

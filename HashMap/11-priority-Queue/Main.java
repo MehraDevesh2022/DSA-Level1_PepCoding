@@ -64,7 +64,7 @@ public class Main {
     }
     public void upHeapyfy(int idx){
       if(idx ==0){
-        return; //that case only one node so need to compare
+        return; //that case only one node so no need to compare
       }
       // find parent idx of that child idx
        int pi = (idx -1)/2; // formula writen in txt file

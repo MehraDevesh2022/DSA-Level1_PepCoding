@@ -67,7 +67,7 @@ public class Main {
          this.idx = idx;
          this.val  = val;
        }
-    public int compareTo(triplet o){ // o => others use anything
+    public int compareTo(triplet o){ // o => is others, use anything
      return this.val -o.val; // this will return min value for priority queue (o.val -this.val => it will return max value || also use idx and li then compare happen based on these in priority queue)
     }
     }
@@ -76,7 +76,7 @@ public class Main {
         // write your code here
         ArrayList<Integer> ans = new ArrayList<>();
         PriorityQueue<triplet> pq = new PriorityQueue<>();
-        for(int i=0; i<lists.size(); i++){ // get all list 0 idx value and store them into pq using triplet object
+        for(int i=0; i<lists.size(); i++){ // get all list from lists al and get each list 0 idx value and store them into pq using triplet object
            triplet temp = new triplet(i, 0 , lists.get(i).get(0));
            pq.add(temp);
         }
@@ -86,12 +86,12 @@ public class Main {
             ans.add(top.val);
 
 
-            // now for next we need refrence of list , idx , and value 
+            // now for next we need reference of list , idx , and value 
             int newLi = top.li;
             int newIdx = top.idx+1;
             // check if list empty
             if(newIdx < lists.get(top.li).size()){
-                 int newVal  = lists.get(newLi).get(newIdx); // lists.get(newLi).get(newIdx) (girst getting list from all list) then getting value of that list using idx
+                 int newVal  = lists.get(newLi).get(newIdx); // lists.get(newLi).get(newIdx) (first getting list from all list) then getting value of that list using idx
                  // now make new triplet obj  with list , idx, and value then add to pq
                  triplet temp = new triplet(newLi , newIdx , newVal);  // making temp triplet obj where this will store refrence list=>i from k lists , idx =0 of list , value of getting int newVal = // lists.get(newLi).get(newIdx);
                  pq.add(temp);
