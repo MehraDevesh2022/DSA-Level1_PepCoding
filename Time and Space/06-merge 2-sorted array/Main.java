@@ -1,8 +1,4 @@
 /*
-               Support the American dream and make coding available to Everyone!!
-                                       ~Snoop Dogg
-
-
  * Merge Two Sorted Arrays
  * Easy Prev Next
  * 1. You are given two sorted arrays(a,b) of integers.
@@ -50,9 +46,9 @@ public class Main {
 
     public static int[] mergeTwoSortedArrays(int[] a, int[] b) {
         // write your code here
-        
-        int c[] = new int[a.length + b.length];
-        int i=0;
+     
+        int c[] = new int[a.length + b.length]; // extra space for adding sort elm of both a,b array
+         int i=0;
         int j=0;
         int k=0;
         while(i<a.length && j<b.length){
@@ -76,7 +72,7 @@ public class Main {
          k++;
          j++;
      }
-        return c;
+        return null;
     }
 
     public static void print(int[] arr) {
