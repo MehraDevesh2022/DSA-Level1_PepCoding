@@ -56,6 +56,8 @@ public class Main {
             br[0] = arr[lo];
             return br;
         }
+
+        // initially lo =0 , hi = arr.length-1 
         int mid = (lo + hi) / 2;
         int leftArr[] = mergeSort(arr, lo, mid);
         int rightArr[] = mergeSort(arr, mid + 1, hi);
