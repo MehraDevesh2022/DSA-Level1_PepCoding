@@ -62,7 +62,7 @@ public class Main {
         // write your code here
         for(int i=1; i<arr.length; i++){
             for(int j= i-1; j>=0; j--){
-                if(isGreater(arr, j, j+1)){  // ye kuch aisa hai : arr[j]>arr[i] se to swap kr do or i idx tak sare short kr do
+                if(isGreater(arr, j, j+1)){  // ye kuch aisa hai : arr[j]>arr[j+1] se to swap kr do or i se 0  idx tak sare short kr do
                     swap(arr, j, j+1);
                 }else{
                     break;
