@@ -47,6 +47,8 @@ public class Main {
 
   public static void sort01(int[] arr){
     //write your code here\
+    // we are using here 2 pointer 
+    // when arr[j] ==0 then swap value with arr[i] and move i as well
     for(int j=0 , i=0; j<arr.length; j++){
           if(arr[j]==0){
             swap(arr, j, i);
