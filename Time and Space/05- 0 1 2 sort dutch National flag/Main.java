@@ -1,4 +1,7 @@
 /*
+                        An algorithm is like a recipe.
+                               ~ Muhammad Waseem
+  
  * Sort 012
  * Easy Prev Next
  * 1. You are given an array(arr) containing only 0's, 1's, and 2's.
