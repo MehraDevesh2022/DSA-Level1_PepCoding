@@ -49,21 +49,26 @@ import java.util.Stack;
          Stack<Character> st = new Stack<>();
          for(int i=0; i<s.length(); i++){
             char ch = s.charAt(i);
+            //add all opening brakets into the stack 
             if(ch == '(' || ch == '{' || ch =='['){
                  st.push(ch);
             }else{
+               // if check is size zero of the stack only closing brakets remains or order is notproper so return false
          if(st.size() ==0){
             return false;
          }
+         // check  when closing brakets arive then stack top elm must be the opening brakets if not that mean order is proper return false
          else if(ch ==')' && st.peek() != '('){
             return false;
          }
+         // same for squre braket and curly brakets as well
          else if(ch == ']' && st.peek() != '['){
             return false;
          }
          else if(ch == '}' && st.peek() != '{'){
             return false;
-         }
+         }    
+         // if those all are condtion false that mean open and closing braktes are same and also order is also proper as well so rmove stack top elm check for next elm from String and stack 
               else{
                 st.pop();
               }   
@@ -71,6 +76,7 @@ import java.util.Stack;
             }
 
          }
+         // check all brakets are remove that mean order are proper for all brakets 
          return st.size()==0;
     }
 }
