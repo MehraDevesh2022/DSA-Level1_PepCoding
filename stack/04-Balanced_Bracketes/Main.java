@@ -1,5 +1,6 @@
 /* AS SAME AS LEETCODE 20
- * 
+ *                    
+       "The purpose of a software engineer is to control complexity not to create it"
  * 
  * 
  * 
