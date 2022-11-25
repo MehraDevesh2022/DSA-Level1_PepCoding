@@ -1,4 +1,7 @@
 /*
+ Sometimes you just give everything you have, and you do your absolute best, and it doesn't stack up.
+                                  ~Tim Howard
+
  * Duplicate Brackets
  * Easy Prev Next
  * 1. You are given a string exp representing an expression.
@@ -46,7 +49,7 @@ public class Main {
           st.push(ch);
         } else {
           if (st.peek() == '(') {
-             return true; // agar stack main closing brackets ke just baad opening brackets aata hai iska mtlb hai uske beech mai koi bhi  content nhi tha to i wha dupicate useless barckets hoga to true return kr do
+             return true; // agar stack main closing brackets ke just baad opening brackets aata hai iska mtlb hai uske beech mai koi bhi  content nhi tha to i wha duplicate useless barckets hoga to true return kr do
           }
           while (st.peek() != '(') {
             st.pop();
