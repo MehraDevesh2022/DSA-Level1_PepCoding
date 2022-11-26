@@ -1,4 +1,4 @@
-/*
+/* level -2
  * Next Greater Element To The Left
  * Medium Prev Next
  * 1. You are given a number n, representing the size of array a.
