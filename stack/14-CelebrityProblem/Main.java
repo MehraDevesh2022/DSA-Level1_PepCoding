@@ -1,4 +1,7 @@
 /*
+"A celebrity is a person who works hard all of their life to become well known, and then wears dark glasses to avoid being recognized.
+~ Fred Allen"
+
  * Celebrity Problem
  * Easy Prev Next
  * 1. You are given a number n, representing the number of people in a party.
