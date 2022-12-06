@@ -91,7 +91,7 @@ public class Main {
         // check  use kya sb jante hai ya nhi in clm arr[i][celbCandidate] !=1  agr 1 na ho sb nhi jante mtlv celb nhi ho skta
           for(int i=0; i<arr.length; i++){
           // celbCandidate !=i dont check your own self
-            if(celbCandidate !=i && arr[i][celbCandidate] !=1 && arr[celbCandidate][i] !=0){
+            if(celbCandidate !=i && arr[i][celbCandidate] !=1 || arr[celbCandidate][i] !=0){
                   ans = false;
                   break;
             }
