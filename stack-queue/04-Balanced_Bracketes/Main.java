@@ -69,7 +69,7 @@ public class Main {
             }
         }
 
-        return st.size() == 0;
+        return st.size() == 0; // agar st.size 0 bacha to true else false
     }
 
 }

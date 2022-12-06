@@ -43,7 +43,8 @@ class Solution {
     public int[] smallElmToRight(int heights[]){
        Stack<Integer> st = new Stack<>();
        int ans[] = new int[heights.length];
-       Arrays.fill(ans, heights.length);
+       Arrays.fill(ans, heights.length); // from write side if there no big elm then width should be array ki lenght kr
+                                         // brabar hogi
        for(int i=0; i<heights.length; i++) {
         while( st.size() !=0  &&   heights[st.peek()] > heights[i]){
             int idx = st.pop();
@@ -56,7 +57,7 @@ class Solution {
 
     public int[]  smallElmToLeft(int heights[]){
        Stack<Integer> st = new Stack<>();
-       int ans[] = new int[heights.length];
+       int ans[] = new int[heights.length]; 
        Arrays.fill(ans, -1);
        for(int i=ans.length-1; i>=0; i--){
         while( st.size() !=0 &&   heights[st.peek()] >heights[i]){

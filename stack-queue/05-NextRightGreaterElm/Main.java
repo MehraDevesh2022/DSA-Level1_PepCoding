@@ -1,7 +1,7 @@
 
 /*
-Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking.
-~ Steve Jobs
+"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking.
+~ Steve Jobs"
 
 
  * Next Greater Element To The Right
@@ -80,7 +80,7 @@ public static void main(String[] args) throws Exception {
 //     ans[i] =-1;
 //    }
 Arrays.fill(ans ,-1); // this is method same is replacement of upper written for loop
-   Stack<Integer> st = new Stack<>();  // create a stack for dtoring idx of each elm from array
+   Stack<Integer> st = new Stack<>();  // create a stack for storing idx of each elm from array
   
    for(int i=0; i<arr.length; i++){     // loop for array n elm 
     while(st.size() !=0 && arr[st.peek()] < arr[i]){     // now check is arr[st.peek()] value is less than arr[i]
