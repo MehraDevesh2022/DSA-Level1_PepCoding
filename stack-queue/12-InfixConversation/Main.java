@@ -37,8 +37,8 @@ public class Main {
    public static int precedence(char optr){
       if(optr =='+' || optr =='-'){
         return 1;
-      }else{
-        return 2;
+      }else{   
+        return 2;     
       }
    }
 
@@ -55,15 +55,15 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String exp = br.readLine();
             Stack<Character> Optr = new Stack<>();
-            Stack<String> postFix = new Stack<>();
-            Stack<String> priFix = new Stack<>();
+            Stack<String> postFix = new Stack<>();  // works => v1v2 + optr
+            Stack<String> priFix = new Stack<>();   // wroks => optr + v1v2
             for(int i=0; i<exp.length(); i++){
                  char ch = exp.charAt(i);
                  if(ch =='('){
                     Optr.push(ch);
                  }
                  else if(!isOptr(ch) && ch !='(' && ch !=')'){
-                      postFix.push(Character.toString(ch));
+                      postFix.push(Character.toString(ch)); // value is char type and stack is String type
                       priFix.push(Character.toString(ch));
                    }
                    else if(isOptr(ch)){
@@ -75,8 +75,9 @@ public class Main {
                                String priFixV1 = priFix.pop();
 
                                char currOptr = Optr.pop();
-                               
+                               // post fix => v1v2 + optr
                                String postExprAns =  postFixV1 + postFixV2 + currOptr;
+                              // prefix ==> optr +  v1v2
                                String priExprAns =   currOptr + priFixV1 + priFixV2;
                                 
                                postFix.push(postExprAns);
