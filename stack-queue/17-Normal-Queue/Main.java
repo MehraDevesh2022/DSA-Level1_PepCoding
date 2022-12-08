@@ -133,7 +133,8 @@ public class Main {
             }else{
               
                 int value = data[front];
-                front = (front + 1) % data.length; // finding real postion of front under btwn 0 to size of data// when remove the elm front++ mean front pointing to new elm new next idx of 
+                // move the front one postion fwd in array. fro curr idx
+                front = (front + 1) % data.length; // front as idx of array first elm in queue
                size--;
                return value;
             }

@@ -1,4 +1,9 @@
 /*
+
+"
+
+Programs must be written for the people to be read and only incidentally for machines to execute"
+
  * Stack To Queue Adapter - Remove Efficient
  * Easy Prev Next
  * 1. You are required to complete the code of our StackToQueueAdapter class.
@@ -81,18 +86,38 @@ public class Main {
 
         int size() {
             // write your code here
+            return mainS.size();
         }
 
         void add(int val) {
             // write your code here
+           while(mainS.size() !=0){
+            helperS.push(mainS.pop());
+           }
+           mainS.push(val);
+           while(helperS.size() !=0){
+            mainS.push(helperS.pop());
+           }
         }
 
         int remove() {
             // write your code here
+            if(mainS.size() ==0){
+                 System.out.println("Queue underflow"); 
+                 return -1;
+            }else{
+                 return mainS.pop();
+            }
         }
 
         int peek() {
             // write your code here
+                    if(mainS.size() ==0){
+                        System.out.println("Queue underflow");
+                        return -1;
+                    }else{
+                        return mainS.peek();
+                    }
         }
     }
 
