@@ -1,4 +1,9 @@
+
 /*
+"Most men and women will grow up to love their servitude and will never dream of revolution.
+~Aldous Huxley"
+
+
  * Two Stacks In An Array
  * Easy Prev Next
  * 1. You are required to complete the code of our TwoStack class. The class
@@ -74,38 +79,89 @@ public class Main {
 
         public TwoStack(int cap) {
             // write your code here
+            int stArr[] = new int[cap];
+            data = stArr;
+            tos1 = 0;
+            tos2 = cap - 1;
+
         }
 
         int size1() {
             // write your code here
+            return tos1;
         }
 
         int size2() {
             // write your code here
+            return tos2;
         }
 
         void push1(int val) {
             // write your code here
+            if (tos1 == tos2) {
+                System.out.println("Stack overflow");
+            } else {
+
+                data[tos1] = val;
+                tos1++;
+            }
+
         }
 
         void push2(int val) {
             // write your code here
+            if (tos1 == tos2) {
+                System.out.println("Stack overflow");
+
+            } else {
+                data[tos2] = val;
+                tos2++;
+            }
         }
 
         int pop1() {
             // write your code here
+            if (tos1 == -1) {
+                System.out.println("Stack underflow");
+                return -1;
+            } else {
+                int val = data[tos1];
+                tos1--;
+                return val;
+            }
         }
 
         int pop2() {
             // write your code here
+
+            if (tos2 == data.length) {
+                System.out.println("Stack underflow");
+                return -1;
+            } else {
+                int val = data[tos2];
+                tos2--;
+                return val;
+            }
         }
 
         int top1() {
             // write your code here
+            if (tos1 == tos2) {
+                System.out.println("Stack overflow");
+                return -1;
+            } else {
+                return data[tos1 - 1];
+            }
         }
 
         int top2() {
             // write your code here
+            if (tos1 == tos2) {
+                System.out.println("Stack overflow");
+                return -1;
+            } else {
+                return data[tos2 - 1];
+            }
         }
     }
 
