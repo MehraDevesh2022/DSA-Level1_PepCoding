@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public static class Main{
+public class Main{
     
     public static class Pair{
         Node node;
@@ -21,9 +21,7 @@ public static class Main{
             Node leftNode;
             Node rightNode;
 
-            Node(){
-
-            }
+            Node(){}
             Node(int val){
                 this.val = val;
             }
@@ -35,6 +33,9 @@ public static class Main{
                  this.rightNode = rightNode;
             }
         }
+
+
+      
     
 
        public static void main(String[] args) {
@@ -51,24 +52,52 @@ public static class Main{
             if(peekPair.state ==1){
                 peekPair.state++;
                 if(arr[idx] !=null){
-                      Node leftNode = new Node(arr[idx]);
-                      Pair leftPair  = new Pair(leftNode , 1);
-                      st.push(leftPair);
+                      Node leftchild = new Node(arr[idx]);
+                     peekPair.node.leftNode =  leftchild;
+                      st.push(new Pair(leftchild ,1));
                 }
                 idx++;
             }
            else if(peekPair.state ==2){
                 peekPair.state++;
                 if(arr[idx] !=null){
-                      Node rightNode = new Node(arr[idx]);
-                      Pair rightPair  = new Pair(rightNode , 2);
-                      st.push(rightPair);
+                      Node rightchild = new Node(arr[idx]);
+                      peekPair.node.rightNode = rightchild;
+    
+                      st.push(new Pair(rightchild , 1));
                 }
                 idx++;
             }else{
                 st.pop();
             }
 
-           }        
+           }  
+           
+           display(rootNode);
+    }
+
+
+    public static void display(Node root) {
+          if(root ==null){
+            return;
+          }
+
+          if(root.leftNode !=null){
+            System.out.print(root.leftNode.val + "");
+          }else{
+            System.out.print(".");
+          }
+          System.out.print("<-- " + root.val + "-->");
+        
+          if(root.rightNode !=null){
+            System.out.print(root.rightNode.val + "");
+          }else{
+            System.out.print(".");
+          }
+
+        System.out.println();
+        display(root.leftNode);
+        display(root.rightNode);
+
     }
 }
