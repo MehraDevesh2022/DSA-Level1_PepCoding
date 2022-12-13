@@ -1,3 +1,7 @@
+//  A positive attitude can really make dreams come true
+// ~David Bailey
+
+
 import java.util.Stack;
 
 public class Main{
