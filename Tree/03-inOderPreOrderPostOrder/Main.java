@@ -79,7 +79,7 @@ public class Main {
          postOrder(rootNode);
     }
 
-
+// Root left Right
 public static void preOrder(Node node){
     if(node ==null){
         return ;
@@ -90,6 +90,7 @@ public static void preOrder(Node node){
     preOrder(node.rightNode);
    
 }
+// Left Root Right
 public static void inOrder(Node node){
     if(node ==null){
         return ;
@@ -102,6 +103,7 @@ public static void inOrder(Node node){
   
    
 }
+// Left Right Root
 public static void postOrder(Node node){
     if(node ==null){
         return ;
