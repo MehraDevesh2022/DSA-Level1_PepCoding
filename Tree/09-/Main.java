@@ -1,4 +1,7 @@
-/*
+/* "Life is really simple, but we insist on making it complicated.
+~ Confucius"
+
+
  * Path To Leaf From Root In Range
  * Easy Prev Next
  * 1. You are given a partially written BinaryTree class.
