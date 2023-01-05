@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+import javax.swing.tree.TreeNode;
+
 public class Main {
 
     public static class Pair {
@@ -41,44 +43,6 @@ public class Main {
         }
     }
 
-    public static void levelOrderTrversal(Node root) {
-        if (root == null) {
-            return;
-        }
-        
-        Queue<Node> qu = new LinkedList<>();
-        qu.add(root);
-        qu.add(null);
-        while (qu.size() > 0) {
-   if(qu.size() ==1 && qu.peek()==null){
-           break;
-   }
-            // remove from queue
-            Node node = qu.remove();
-            // print val
-            if(node ==null){
-                System.out.println();
-                qu.add(null);
-                
-            }
-              if(node !=null){
-                  System.out.print(node.val + " ");
-              }
-
-         
-              
-           
-            // add left child
-            if (node !=null && node.leftNode != null) {
-                qu.add(node.leftNode);
-            }
-            // add right child
-            if (node != null && node.rightNode != null) {
-                qu.add(node.rightNode);
-            }
-        }
-    }
-
     public static void main(String[] args) {
         Integer[] arr = { 50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null,
                 null };
@@ -110,33 +74,41 @@ public class Main {
             } else {
                 st.pop();
             }
-
-        }
-        levelOrderTrversal(rootNode);
-        // display(rootNode);
+         }
+         levelOrderTrversal3rdWay(rootNode);
+       
     }
 
-    public static void display(Node root) {
-        if (root == null) {
+    public static void levelOrderTrversal3rdWay(Node root){
+        if(root ==null){
             return;
         }
+        Queue<Node>  qu = new LinkedList<>();
+        qu.add(root);
 
-        if (root.leftNode != null) {
-            System.out.print(root.leftNode.val + "");
-        } else {
-            System.out.print(".");
+        while(qu.size() >0){
+            int size = qu.size();
+            while(size -->0){
+                // remove peek;
+                Node peek = qu.remove();
+
+                // print value 
+                System.out.print(peek.val + "  ");
+
+                //add child
+                if(peek.leftNode !=null){
+                    qu.add(peek.leftNode);
+                }
+                if(peek.rightNode !=null){
+                    qu.add(peek.rightNode);
+                }   
+
+            }
+         
+
+            // now break line
+            System.out.println();
         }
-        System.out.print("<-- " + root.val + "-->");
-
-        if (root.rightNode != null) {
-            System.out.print(root.rightNode.val + "");
-        } else {
-            System.out.print(".");
-        }
-
-        System.out.println();
-        display(root.leftNode);
-        display(root.rightNode);
-
     }
 }
+
