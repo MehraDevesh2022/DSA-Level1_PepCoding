@@ -87,6 +87,11 @@ public class Main {
         qu.add(root);
 
         while(qu.size() >0){
+
+            // get size queue
+            // if size of queue is greater than  0 do work rmove --print value --> add child of removing node and size -- as well;
+            // once Size =0 then print new line and check queue size is > 0
+            // if gretaer then again repeat
             int size = qu.size();
             while(size -->0){
                 // remove peek;
@@ -102,7 +107,7 @@ public class Main {
                 if(peek.rightNode !=null){
                     qu.add(peek.rightNode);
                 }   
-
+k
             }
          
 
