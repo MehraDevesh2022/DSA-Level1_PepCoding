@@ -176,11 +176,13 @@ public class Main {
     public static void mirror(Node node) {
         // write your code here
         for(Node child : node.children){
-              mirror(child);
+            // faith=> mere children apne app ko reverse kr denge or uske baad main apne app
+            // ko reverse kr dunga
+              mirror(child); 
         }
         int  i=0;
         int j= node.children.size() -1;
-
+          // each nodes children will reverse    
         while(i<j){
             Node v1 = node.children.get(i);
             Node v2 = node.children.get(j);

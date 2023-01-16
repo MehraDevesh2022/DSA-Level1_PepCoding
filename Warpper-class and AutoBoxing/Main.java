@@ -1,14 +1,13 @@
 // Wrapper-class ==> for obtain pure oops beaviour java create wrapper class.
 //  Intger , Float , Character , String  , Float etc
 // Wrapper class store => either value or by default null.
- // eg : int x= 3; int x; // x=0 by default.
- //      Integer x =3; and Integer x ; where   x is null bydefault
- 
+//  eg : int x= 3; int x; // x=0 by default.
+//      Integer x =3; and Integer x ; where   x is null bydefault
  
 // AutoBoxing def. ==> Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes. For example, converting an int to an Integer, a double to a Double, and so on. If the conversion goes the other way, this is called unboxing. 
 
 
- // Autoboxing eg :
+// Autoboxing eg :
 
  public class Main{
     public static void main(String[] args) {
@@ -28,7 +27,7 @@
            
  
         
-
+         
          for(int ele : WraperArr) {
              System.out.print(ele + " "); // output : error , NullPointerException (because int only store int type value but WrappeArr have null value by defalut)
          }

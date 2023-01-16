@@ -76,7 +76,7 @@ public class Main {
         return true;
     }
     for(Node child : node.children){
-        boolean ans =find(child, data)
+        boolean ans =find(child, data);
         if(ans){
             return true;
         }
@@ -84,6 +84,7 @@ public class Main {
             continue;
         }
     }
+    return false;
   }
 
   public static void main(String[] args) throws Exception {
