@@ -1,14 +1,12 @@
 /*
-"Nobody who ever gave his best regretted it.
-~George Halas"
-
- * Are Trees Mirror In Shape
+ * Is Generic Tree Symmetric
  * Easy Prev Next
  * 1. You are given a partially written GenericTree class.
- * 2. You are required to complete the body of areMirror function. The function
- * is expected to check if the two trees passed to it are mirror images of each
- * other in shape (data not to be checked, just the shape of tree).
- * Note -> Watch the question video for clarity.
+ * 2. You are required to complete the body of IsSymmetric function. The
+ * function is expected to check if the tree is symmetric, if so return true
+ * otherwise return false. For knowing symmetricity think of face and hand. Face
+ * is symmetric while palm is not. Also, we are check only smmetricity of shape
+ * and not content. Check the question video for clarity.
  * 3. Input and Output is managed for you.
  * Input Format
  * Input is managed for you
@@ -19,15 +17,12 @@
  * COMMENTConstraints
  * None
  * Sample Input
- * 12
- * 10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
- * 12
- * 100 200 -1 300 500 -1 600 -1 -1 400 -1 -1
+ * 20
+ * 10 20 50 -1 60 -1 -1 30 70 -1 80 -1 90 -1 -1 40 100 -1 110 -1 -1 -1
  * Sample Output
  * true
  */
-
- import java.io.*;
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -108,31 +103,36 @@ public class Main {
         return h;
     }
 
-    public static boolean areMirror(Node n1, Node n2) {
+    public static boolean IsSymmetric(Node node) {
         // write your code here
+        for(int i=0 ,j = node.children.size()-1; i<=j; j-- , i++){
+              Node v1 = node.children.get(i);
+              Node v2 = node.children.get(j);
+              if(v1.children.size() !=v2.children.size()){
+                 return false;
+            }
     }
+        for(Node child : node.children){
+           if( !IsSymmetric(child)){
+            return false;
+           }
+    }
+    return true;
 
+    }
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        int n1 = Integer.parseInt(br.readLine());
-        int[] arr1 = new int[n1];
-        String[] values1 = br.readLine().split(" ");
-        for (int i = 0; i < n1; i++) {
-            arr1[i] = Integer.parseInt(values1[i]);
+        int n = Integer.parseInt(br.readLine());
+        int[] arr = new int[n];
+        String[] values = br.readLine().split(" ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(values[i]);
         }
-        Node root1 = construct(arr1);
 
-        int n2 = Integer.parseInt(br.readLine());
-        int[] arr2 = new int[n2];
-        String[] values2 = br.readLine().split(" ");
-        for (int i = 0; i < n2; i++) {
-            arr2[i] = Integer.parseInt(values2[i]);
-        }
-        Node root2 = construct(arr2);
-
-        boolean mirror = areMirror(root1, root2);
-        System.out.println(mirror);
+        Node root = construct(arr);
+        boolean sym = IsSymmetric(root);
+        System.out.println(sym);
+        // display(root);
     }
 
 }
