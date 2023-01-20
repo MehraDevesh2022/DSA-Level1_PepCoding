@@ -78,6 +78,23 @@ public class Main {
 
     public static void ceilAndFloor(Node node, int data) {
         // Write your code here
+        // ceil and floor => floor given data ki nearest small value left side se greatest value and ceil  data ki nearest greater value then data and right side ko smallest value.  eg: -19 -5 28 101 89 => given data 50  => to floor nearset samll value is 28 and ist gretaset from left side and . ceil is  89  jo data se greater and smaller value in right side.
+        // ceil => for any node if node.data is > data and node.data curr ceil ki value se chota hona chahiye
+        // floor => for any node if node.data < data && node.data > floor.
+
+        if(node.data < data){
+            if(node.data > floor){
+                floor = node.data;
+            }
+        }
+        if(node.data > data){
+            if(node.data < ceil){
+                ceil = node.data;
+            }
+        }
+        for(Node child : node.children){
+              ceilAndFloor(child, data);
+        }
     }
 
     public static void main(String[] args) throws Exception {
