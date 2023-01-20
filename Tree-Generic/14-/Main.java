@@ -110,6 +110,23 @@ public class Main {
 
     public static boolean areMirror(Node n1, Node n2) {
         // write your code here
+        // check both curr nodes are similar or not by cheaking their childrens size
+           if(n1.children.size() != n2.children.size()){
+            return false;
+           }
+           // if we are that mean nodes size are same so use loop any of them .. it will work for both tree nodes
+           for(int i=0; i<n1.children.size()-1; i++){
+            // now check for there child .. but remeber any objects mirror reflection is left is mirros right and right one is mirrors left.
+            // so we are comparing n1 left to n2 right nodes , so for n1 we starting from 0 and for n2 we staring from last node
+              Node child1 =  n1.children.get(i);
+              Node child2 =  n2.children.get(n2.children.size()-i-1); // from last node to 0th node
+              if(!areMirror(child1, child2)){ // if value false returns then return false
+                return false;
+              }
+            
+           }
+        //    if nodes valuse are not false that mean nodes are mirror till now and return true
+        return true;
     }
 
     public static void main(String[] args) throws Exception {
