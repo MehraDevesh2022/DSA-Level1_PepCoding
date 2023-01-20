@@ -1,4 +1,6 @@
 /*
+"Depth of Recursion Stack and life is a little bit tricky to understand. Once you understand it, you just maintain its flow."
+
  * Ceil And Floor In Generic Tree
  * Easy Prev Next
  * 1. You are given a partially written GenericTree class.
