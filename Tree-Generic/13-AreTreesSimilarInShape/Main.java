@@ -137,7 +137,7 @@ public class Main {
 
       public static boolean areSimilar(Node n1, Node n2) {
         // write your code here
-             if(n1.children.size() != n2.children.size()){
+             if(n1.children.skize() != n2.children.size()){
                 return false;
              }
              // now make any one in both because both children will same after this line for curr Nodes
