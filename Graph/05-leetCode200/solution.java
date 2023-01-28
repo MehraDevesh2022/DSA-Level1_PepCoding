@@ -53,7 +53,7 @@ Submissions
         int n = grid.length-1;
         int m = grid[0].length-1;    
         
-        grid[i][j] = '0';
+        grid[i][j] = '0';  // mark the land for not visit again
           // make call top right bottom left using if else || make dir array =>
             int dir [][] = {{1 ,0} ,{0 , 1}, {-1 ,0} ,{0 ,-1} };
             for(int elm[] : dir){
@@ -71,7 +71,9 @@ Submissions
         for(int i=0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
                 if(grid[i][j] =='1'){
+                    // if grid[i][j] has 1 that mean land finded for that area do count ++
                     count++;
+                    // find all connected neaibhours for that node and mark them visited
                     findIsland(grid , i , j);
                 }
             }
