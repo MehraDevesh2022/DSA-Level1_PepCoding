@@ -6,8 +6,7 @@
  * from 0 to n - 1.
  * 2. You are given a number k (representing the number of clubs)
  * 3. In the next k lines, two numbers are given separated by a space. The
- * numbers are ids of
- * students belonging to same club.
+   numbers are ids of  students belonging to same club.
  * 4. You have to find in how many ways can we select a pair of students such
  * that both students are
  * from different clubs.
@@ -35,8 +34,26 @@ import java.util.*;
 
 public class Main {
 
+    public static class Edge{
+        int src;
+        int nbr;
+        // int wt;
+
+        Edge(){
+
+        }
+        Edge(int src , int nbr ){
+            this.src = src;
+            this.nbr = nbr;
+            // this.wt = wt;
+        }
+
+
+
+    }
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Scanner scn = new Scanner(System.in);
 
         int n = Integer.parseInt(br.readLine());
         int k = Integer.parseInt(br.readLine());
@@ -46,6 +63,8 @@ public class Main {
         // create a graph
         // find component using getConnected
         // count length of each arrayList and add them
+         /// >>>>>>>>>>>>>i wii start from here latter 
+
     }
 
 }
