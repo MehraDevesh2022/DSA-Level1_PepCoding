@@ -55,7 +55,16 @@
  */
 class Solution {
 public int maxDepth(root){
-    return (root ==null ? -1 : Math.max(maxDepth(root.left), maxDepth(root.right)) +1 );
+    // finding the height =>
+    // return (root ==null ? -1 : Math.max(maxDepth(root.left), maxDepth(root.right)) +1 );
+
+    if(root ==null){
+        return -1;
+    }
+    int leftHeight = maxDepth(root.left);
+    int rightHeight = maxDepth(root.right);
+    int max  = Math.max(leftHeight, rightHeight);
+    return max+1;
 }
 
     public int diameterOfBinaryTree(TreeNode root) {

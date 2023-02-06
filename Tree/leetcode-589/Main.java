@@ -69,6 +69,11 @@ The number of nodes in the tree is in the range [0, 104].
  */
 class Solution {
     int tilt =0;
+// approch =>
+//    left ka sum and right ka sum 
+//  fir tilt main add kro => leftsum and rightSum ke diffrence ki absolute value => Math.abs(leftSum - rightSum);
+// return kro apna total sum taki parent node apna tilt nikal paye.
+ // tilt  => left ka sum or right ka sum lao and inka diffrence niakl ke absolute add kr do abtk ke tilt main
     public int sum(TreeNode root){
         if (root == null) {
             return 0;

@@ -117,7 +117,7 @@ public class Main {
         if(node ==null){
             return new ArrayList<>();
         }
-      // when node datas  == given data
+      // when node data  == given data
        if(node.data ==data){
         ArrayList<Node> ans = new ArrayList<>();
         ans.add(node);
