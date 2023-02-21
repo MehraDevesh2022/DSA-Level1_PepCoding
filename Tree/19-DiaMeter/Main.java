@@ -1,7 +1,4 @@
 /*
-"There is only one corner of the universe you can be certain of improving, and that's your own self.
-~Aldous Huxely"
-
  * Diameter Of A Binary Tree
  * Easy Prev Next
  * 1. You are given a partially written BinaryTree class.
@@ -25,7 +22,7 @@
  * 6
  */
 
-import java.io.*;
+ import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -117,27 +114,26 @@ public class Main {
         int th = Math.max(lh, rh) + 1;
         return th;
     }
+ 
+    // find left height and right height and add them and add 2 for root node and return max of all three
+    public static int diameter1(Node node) {
+        // write your code here
+        if(node ==null){
+            return 0;
+        }
 
-    // find left height and right height and add them and add 2 for root node and
-    // return max of all three 
-    ic static int diameter1
-    // writ your c
+        int ld = diameter1(node.left);
+        int rd = diameter1(node.right);
+        
+        int leftHeight  = height(node.left);
+        int rightHeight = height(node.right);
 
-    o
-        ode ==nul
-     
+        int myDiameter = leftHeight + rightHeight +2;
 
-    
-    int ld = diameter1(node.left);
+         int diameter = Math.max(Math.max(ld , rd) , myDiameter);
+         return diameter;
+        
 
-     
-    int leftHeight  = height(node.left);
-
-     
-
-    int diameter = M
-
-    
     }
 
     public static void main(String[] args) throws Exception {

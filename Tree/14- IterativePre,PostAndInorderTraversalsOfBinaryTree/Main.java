@@ -103,11 +103,11 @@ public class Main {
         Stack<Pair> st = new Stack<>();
         st.push(rtp);
 
-        int idx = 0;
+        int idx = 1;
         while (st.size() > 0) {
             Pair top = st.peek();
             if (top.state == 1) {
-                idx++;
+                top.state++;
                 if (arr[idx] != null) {
                     top.node.left = new Node(arr[idx], null, null);
                     Pair lp = new Pair(top.node.left, 1);
@@ -115,10 +115,11 @@ public class Main {
                 } else {
                     top.node.left = null;
                 }
-
-                top.state++;
-            } else if (top.state == 2) {
+              
                 idx++;
+
+            } else if (top.state == 2) {
+                    top.state++;
                 if (arr[idx] != null) {
                     top.node.right = new Node(arr[idx], null, null);
                     Pair rp = new Pair(top.node.right, 1);
@@ -127,7 +128,8 @@ public class Main {
                     top.node.right = null;
                 }
 
-                top.state++;
+                
+                idx++;
             } else {
                 st.pop();
             }

@@ -68,7 +68,7 @@ public class Main{
                       Node rightchild = new Node(arr[idx]);
                       peekPair.node.rightNode = rightchild;
     
-                      st.push(new Pair(rightchild , 1));
+                    st.push(new Pair(rightchild , 1));
                 }
                 idx++;
             }else{
