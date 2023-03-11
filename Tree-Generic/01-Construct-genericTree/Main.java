@@ -10,7 +10,7 @@ public class Main {
     int data; // for storing the data
     ArrayList<Node> children = new ArrayList<>();// for storing the child nodes
   }
-  }
+  
 
   public static void display(Node node) {
     String str = node.data + " -> "; // for roots reach child
