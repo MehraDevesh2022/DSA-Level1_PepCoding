@@ -74,7 +74,7 @@
                          st.push(i);
                         }
                           for(int i=0; i<arr.length;i++){
-                            spanArr[i] =  i - spanArr[i]; // formula by realiszation output
+                            spanArr[i] =  i - spanArr[i]; // formula by realization output
                           }
 
                         return spanArr;
