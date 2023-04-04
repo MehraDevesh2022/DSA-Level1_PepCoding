@@ -34,7 +34,7 @@ All the questions in this repository belong to the level 1 DSA practice set of P
 | Basic Algorithm | [Problems](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/GettingStarted) |
 | String | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/String_Arraylist) |
 | StringBuilder | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/String_Arraylist) |
-| 2D Array | [Questions](.https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/2dArray) |
+| 2D Array | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/2dArray) |
 | Recursion | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Recursion) |
 | Dynamic Programming (DP) | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/DP) |
 | Heap and Queue | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/queue) |
