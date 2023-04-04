@@ -51,7 +51,7 @@ All the questions in this repository belong to the level 1 DSA practice set of P
 | Graph  | [Question](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Graph) |
 | Pattern |[Question](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Pattern) |
 | Time and Space complexity | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Time%20and%20Space)|
-| Sorting Algorithms| [Questions]((https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Time%20and%20Space) |
+| Sorting Algorithms| [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Time%20and%20Space)|
 
 ## Additional Questions from FreeCodeCamp
 
