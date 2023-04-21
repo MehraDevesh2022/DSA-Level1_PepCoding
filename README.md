@@ -1,32 +1,79 @@
-# DSA-L1-Fjp3-PepCoding
-##  Level - 1
+# Data Structures and Algorithms Repository
 
-## Getting startd :
-### 1  : The Curious Case Of Benjamin Bulbs  👍
-### 2  : Count Digit 👍
-### 3  : Digits Of number 👍
-### 4  : Print Fibonacci Numbers Till N 👍
-### 5  : Gcd And Lcm 👍
-### 6  : Grading System 👍
-### 7  : Inverse Of A Number 👍
-### 8  : Is A Number Prime 👍
-### 9  : Prime Factorisation Of A Number 👍
-### 10 : Is A Number Prime low to high👍 
-### 11 : Pythagorean Triplet 👍
-### 12 : Print Z 👍
-### 13 : Reverse A Number 👍
-### 14 : Rotate A Number 👍
+This repository contains solutions for various Data Structures and Algorithms problems in Java programming language. The solutions are arranged in the following topics:
 
+- Array
+- ArrayList
+- Basic Algorithm
+- String
+- StringBuilder
+- 2D Array
+- Recursion
+- Dynamic Programming (DP)
+- Heap and Queue
+- Hashmap
+- Stack and Queue
+- Object-Oriented Programming (OOPs)
+- Lambda Functions
+- Binary Search Tree (BST)
+- Tree
+- Generic Tree
+- Binary Tree
+- Number System
+- LinkedList
+- Graph
+- Pattern Problems
+All the questions in this repository belong to the level 1 DSA practice set of Peppcoding, along with some additional questions from FreeCodeCamp's JavaScript and Algorithm sections.
 
-## Pattern :
-### 20 Question Done !
+## Table of Contents
 
-## Function and Array
-### 1 : BarChart 👍
-### 2 : Binary Search 👍
-### 3 : Diffrence between two Array 👍
-### 4 : Sum of two Array 👍
-### 5 : Rotate of Array 👍
-### 6 : Reverse an array 👍
-### 7 : Span of Array 👍
-### 8 : Inverse Of An Array 👍
+| DSA Topic | Problem Set |
+| --------- | ----------- |
+| Array | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/function%20and%20arrays) |
+| ArrayList | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/String_Arraylist) |
+| Basic Algorithm | [Problems](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/GettingStarted) |
+| String | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/String_Arraylist) |
+| StringBuilder | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/String_Arraylist) |
+| 2D Array | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/2dArray) |
+| Recursion | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Recursion) |
+| Dynamic Programming (DP) | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/DP) |
+| Heap and Queue | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/queue) |
+| Hashmap | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/HashMap) |
+| Stack and Queue | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/stack-queue) |
+| Object-Oriented Programming (OOPs) | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Warpper-class%20and%20AutoBoxing) |
+| Lambda Functions | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/lamdaFunction) |
+| Binary Search Tree (BST) | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Tree-BST) |
+| Tree | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Tree) |
+| Generic Tree | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Tree-Generic) |
+| Binary Tree | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Tree) |
+| Number System | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Number%20System) |
+| LinkedList | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/LinkedList) |
+| Graph  | [Question](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Graph) |
+| Pattern |[Question](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Pattern) |
+| Time and Space complexity | [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Time%20and%20Space)|
+| Sorting Algorithms| [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Time%20and%20Space)|
+
+## Additional Questions from FreeCodeCamp
+
+### Basic Algorithm
+- [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Java-Script-and-Algorithm/Basic-Algo)
+
+### Basic DSA
+- [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Java-Script-and-Algorithm/Basic-Dsa)
+
+### Regex Questions
+- [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Java-Script-and-Algorithm/RegEx)
+
+### OOP Sections Problems
+- [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Java-Script-and-Algorithm/oops)
+
+### ES6 Practice Questions
+- [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Java-Script-and-Algorithm/ES6)
+
+### Intermediate DSA
+- [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Java-Script-and-Algorithm/intermediateDsa)
+
+### Functional Programming Questions
+- [Questions](https://github.com/MehraDevesh2022/DSA-Level1_PepCoding/tree/master/Java-Script-and-Algorithm/functional%20Programming)
+
+Feel free to contribute to this repository by adding new solutions or improving existing ones. Happy coding!
