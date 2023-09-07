@@ -39,28 +39,33 @@ import java.util.Scanner;
 
 import java.util.*;
 
-public class Main{
-    public static void main(String[] args) {
-    Scanner scn = new Scanner(System.in);
-    int low = scn.nextInt();
-    int high = scn.nextInt();
-     primeTillN(low ,high);
-    }
+public class Main {
+
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        int t  = scn.nextInt() ;
     
-    public static void primeTillN(int low , int high){
-        for(int num = low; num<=high; num++){
-        boolean ans  = isPrime(num);
-          if(ans == true){
-               System.out.println(num);
-          }
-        }
+
+       for(int  i=0; i<t; i++){
+        int n = scn.nextInt();
+        boolean IsPrimeNumber = isPrime(n);
+        if(IsPrimeNumber){
+            System.out.println("prime");
+       }else{
+              System.out.println("not prime");
+         }
+       }
+         
     }
-    public static boolean isPrime(int num){
-        for(int i=2; i*i<num; i++){
-            if(num %2 ==0){
-                return false;
-            }
+
+
+  public static boolean isPrime(int number){
+      for(int i=2; i*i<=number; i++){
+        if(number%i ==0){
+            return false;
         }
-        return true;
-    }
+      }
+      return true;
+  }
+         
 }
