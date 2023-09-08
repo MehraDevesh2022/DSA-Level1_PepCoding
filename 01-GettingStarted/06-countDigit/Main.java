@@ -40,6 +40,7 @@ import java.util.Scanner;
        int count =0;
        while(n !=0){
           n = n/10;
+       System.out.println(n);
           count++;
        }
         return count;
