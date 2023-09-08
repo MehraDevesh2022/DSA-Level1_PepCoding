@@ -18,29 +18,26 @@ function main() {
 }
 
 function processTestCase(totalTest, currTestCase) {
-  if(totalTest ===currTestCase){
+  if (totalTest === currTestCase) {
     rl.close();
     return;
   }
 
   rl.question("", function (number) {
     let n = parseInt(number);
-    if(isNaN(n)){
-        console.log("Please enter a  valid number");
-        rl.close(); 
-    }
-   
- else {
-    let isPrime  = isPrimeNumber(n);
-    if(isPrime){
+    if (isNaN(n)) {
+      console.log("Please enter a  valid number");
+      rl.close();
+    } else {
+      let isPrime = isPrimeNumber(n);
+      if (isPrime) {
         console.log("Number is Prime");
-    }else {
+      } else {
         console.log("number is not prime");
+      }
     }
- }   
 
- processTestCase(totalTest , currTestCase +1);
-
+    processTestCase(totalTest, currTestCase + 1);
   });
 }
 
