@@ -47,7 +47,7 @@ public class Main {
                 System.out.print(i + " ");
             }
         }
-        if (n != 1) // when number divisibal by only itself
+        if (n != 1) // when number divisibal by only itself like 17 is
         {
             System.out.println(n);
         }

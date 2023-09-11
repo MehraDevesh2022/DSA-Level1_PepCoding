@@ -39,7 +39,7 @@ public class Main {
         int n = scn.nextInt();
         int k = scn.nextInt();
         int pow = 1;
-        int nod = 0;
+        int nod = 0; // number of digit
         // Count number of digit
         int temp = n;
         while (temp != 0) {
