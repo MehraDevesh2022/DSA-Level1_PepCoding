@@ -42,30 +42,38 @@
 
 
 import java.util.*;
- // main function
+
+/**
+ * Main
+ */
 public class Main {
-  public static void main(String[] args) {
+
+  public static void main(String [] args){
     Scanner scn = new Scanner(System.in);
-    int low = scn.nextInt();
-    int high = scn.nextInt();
-    primeTillN(low, high);
+    int low  = scn.nextInt();
+    int high  = scn.nextInt();
+
+      // check all prime in low to high range
+
+         checkPrimes(low  , high);
+
+
   }
- // prime digits low to high
-  public static void primeTillN(int low, int high) {
-    for (int num = low; num <= high; num++) {
-      boolean ans = isPrime(num);
-      if (ans == true) {
-        System.out.println(num);
+     public static void checkPrimes(int low , int high){
+        for(int i= low; i<=high; i++){
+          boolean isPrime = isNumberPrime(i);
+          if(isPrime){
+            System.out.println("Number " + i + " is a prime");
+          }
+        }
+     }
+    public static boolean isNumberPrime(int num){
+      for(int i=2; i*i<=num; i++){
+          if(num % i ==0){
+            return false;
+          }
       }
+      return true;
     }
-  }
-// check either prime or not
-  public static boolean isPrime(int num) {
-    for (int i = 2; i * i <= num; i++) {
-      if (num % i == 0) {
-        return false;
-      }
-    }
-    return true;
-  }
+
 }
