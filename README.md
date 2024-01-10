@@ -4,7 +4,7 @@ This repository contains solutions for various Data Structures and Algorithms pr
 
 - Array
 - ArrayList
-- Basic Algorithm
+- Basic Algorith
 - String
 - StringBuilder
 - 2D Array
