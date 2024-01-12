@@ -9,7 +9,7 @@ This repository contains solutions for various Data Structures and Algorithms pr
 - StringBuilder
 - 2D Array
 - Recursion
-- Dynamic Programming (DP)
+- Dynamic Programming (DP
 - Heap and Queue
 - Hashmap
 - Stack and Queue
