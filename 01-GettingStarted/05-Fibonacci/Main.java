@@ -16,7 +16,7 @@ Output Format
 3
 5
 8
-.. first n fibonaccis
+ first n fibonaccis
 */
 
 import java.util.*;
