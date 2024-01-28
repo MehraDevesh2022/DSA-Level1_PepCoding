@@ -1,7 +1,7 @@
 # Data Structures and Algorithms Repository
 
 This repository contains solutions for various Data Structures and Algorithms problems in Java programming language. The solutions are arranged in the following topics:
-
+- Basic Mathematics 
 - Array
 - ArrayList
 - Basic Algorithm
