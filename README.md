@@ -1,4 +1,4 @@
-# Data Structures and Algorithms Repository :
+# Data Structures and Algorithms Repository Level 1:
 
 This repository contains solutions for various Data Structures and Algorithms problems in Java programming language. The solutions are arranged in the following topics:
 - Basic Mathematics 
